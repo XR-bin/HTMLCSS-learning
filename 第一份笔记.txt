@@ -1,0 +1,103 @@
+1、什么是HTML、CSS？
+	是做网站的编程语言
+	浏览器把代码解析后的样子就是我们看到的网站，如何看到网站的源代码呢？
+	通过鼠标右键选择查看网页源代码。
+
+	如何去写代码？写在哪里？
+	
+		一个网站是由N个网页组成的。    每一个网页 =>  .html文件
+		例如：电视剧，40集   网站=电视剧   网页=40集
+
+2、VS Cood
+	快捷键
+	ctrl + s   保持
+	ctrl + a   全选
+	ctrl + x  、 ctrl + c 、 ctrl + v   剪切 复制 粘贴
+	ctrl + z 、 ctrl + y  撤销  前进
+	shift + end ：从头选中一行
+	shift + home: 从尾部选中一行
+	shift + alt + ↓ ：快速复制一行
+	alt + ↑或↓：快速移动一行
+
+	Tab：向后缩进
+	shift+Tab：先前缩进
+
+	多光标： alt + 鼠标左键
+	选择相同元素的下一个：ctrl + d
+
+	创建标签的快捷键：写好的单词+tab
+	创建初始代码：！+tab
+
+	注释快捷键
+	1、ctrl+/
+	2、shift+alt+a
+	3、shift+ctrl+/
+
+3、深入了解网站开发？
+	UI设计师：设计稿
+	Web前端工程师（H5开发）
+		设计稿 => 代码
+		数据库里的数据 => 显示到网页
+		HTML + CSS
+			HTML：结构
+			CSS：样式
+			JavaScript：行为
+	Web后端工程师
+
+4、前端三大核心技术
+	HTML
+	CSS
+	JavaScript
+
+HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
+
+5、HTML初始代码
+	每个.html文件都有的代码叫做初始代码，要复合html文件的规范写法
+
+	<!DOCCTYPE html>  文档声明：告诉浏览器这是一个html文件
+	leng="en"表示是一个英文网站
+	leng="zh-CN"表示一个中文网站
+	<html lang="en">     html文件的最外层标签：包裹着所有的html标签代码
+		<head>
+			元信息：是编写网页中的一些赋值信息
+			<meta charset="UTF-8">
+			设置网页的标题
+			<title>Document</title>
+		</head>
+		<body>
+			显示网页内容的区域
+		</body>
+	</html>	
+
+6、注释<!-- --->
+	意义：
+		1、把暂时不用的代码注释起来，方便以后使用
+		2、对开发人员进行提示
+
+7、HTML语义
+
+    所谓HTML语义指的是，根据网页中内容的结构，选择适合的HTML标签进行编写
+
+    好处：
+            1、在没有CSS的情况下，页面也能呈现出很好的内容结构。
+            2、有利于SEO，让搜索引擎爬虫更好的理解网页。
+            3、方便其他设备解析(如屏幕阅读器、盲人阅读器等)。
+            4、便于团队开发和维护。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
