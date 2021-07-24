@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表格标签</title>
+    </head>
+    <body>
+        <!--  
+            <table> ：表格的最外层容器 
+            <tr> ：定义表格的行
+            <th> ：定义表头
+            <td> ：定义表格单元
+            <caption> ：定义表格标题
+            
+            【注】：他们之间是有嵌套关系的，要复合嵌套规范
+
+            表格语义化标签：<thead> 、 <tbody> 、 <tfood>
+            【注】：在一个table中tbody是可以出现多次的，但thead和tfood只能出现一次
+        -->
+        <table>
+            <caption>天气预报</caption>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>天气情况</th>
+                    <th>出行情况</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2021年7月24日</td>
+                    <td><img src="./img/图1.png" alt="图片故障"></td>
+                    <td>天气多云小雨，适合出行</td>
+                </tr>
+                <tr>
+                    <td>2021年7月24日</td>
+                    <td><img src="./img/图2.png" alt="图片故障"></td>
+                    <td>天气小雨，不适合出行</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </body>
+</html>

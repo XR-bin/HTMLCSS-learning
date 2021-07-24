@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单input标签</title>
+    </head>
+    <body>
+        <!--  
+            表单标签
+                <form>: 表单的最外层容器
+                <input>：标签用于收集用户信息，根据不同的type属性值，展示不同的控件，
+                        如输入框、密码框、复选框等，input是单标签
+
+                <form>的action属性：表单提交到哪的地址
+
+                <input>的type属性
+                    text           普通的文本输入框
+                    password       密码输入框
+                    checkbox       复选框
+                    radio          单选框
+                    file           上传文件
+                    submit         提交按钮
+                    reset          重置按钮
+        -->
+
+        <form action="www.baidu.com">
+
+            <!--  
+                placeholder属性：在方框内没有任何字符和文字的情况下显示指定提示语
+            -->
+            <h2>输入框:</h2>
+            <input type="text" placeholder="方框内不能为空" />
+
+            <h2>密码框：</h2>
+            <input type="password" placeholder="方框内不能为空" />
+
+            <!--  
+                checked属性：效果是选项初始就被选中
+                disabled属性： 效果是选项禁止被选中
+            -->
+            <h2>复选框</h2>
+            <input type="checkbox" checked />苹果
+            <input type="checkbox" checked="checked"/>香蕉
+            <input type="checkbox" disabled />葡萄
+
+            <h2>单选框</h2>
+            <input type="radio" name="sex" />男
+            <input type="radio" name="sex" />女
+
+            <h2>上传文件</h2>
+            <input type="file" />
+
+            <h2>提交按钮和重置按钮</h2>
+            <input type="submit" />
+            <input type="reset" />
+        </form>
+    </body>
+</html>

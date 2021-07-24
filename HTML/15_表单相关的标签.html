@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单相关的标签</title>
+    </head>
+    <body>
+        <form>
+            <h2>多行文本框</h2>
+            <!--  
+                <textarea> ：多行文本框
+                    属性                  作用
+                    cols        控制可视宽度，也可以说列数
+                    row         控制可视高度，也可以说行数
+
+            -->
+            <textarea cols="30" rows="10"></textarea>
+
+            <br />
+
+            <!--  
+                下拉菜单
+                    <select> 、 <option>
+                    
+                    <option>属性：
+                            disabled属性： 效果是选项禁止被选中
+                            selected属性： 效果是初始被选中
+
+                    <select>属性：
+                            size属性：可视区域选项个数，依然只能选中一项，只是可视区域变化了
+                            multiple属性：选中项可以实现多选
+
+            -->
+            <select>
+                <option selected disabled>请选择</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option>深圳</option>
+            </select>
+
+            <br />
+
+            <select size="2">
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option>深圳</option>
+            </select>
+
+            <br />
+
+            <select multiple>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option>深圳</option>
+            </select>
+
+            <br />
+
+            <!--  
+                <lable>： 辅助表单标签，使可选中有效区域变大
+
+                for属性：绑定id
+            -->
+            <input type="radio" name="sex1" />男
+            <input type="radio" name="sex1" />女
+            <br />
+            <input type="radio" name="sex2" id="man" /><label for="man">男</label>
+            <input type="radio" name="sex2" id="woman" /><label for="woman">女</label>
+        </form>
+    </body>
+</html>
