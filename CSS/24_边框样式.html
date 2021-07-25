@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>边框样式</title>
+        <style type="text/css">
+            #div1{
+                width: 300px; height: 300px;
+                border-style: solid;
+                border-color: royalblue;
+                border-width: 1px;
+            }
+
+            #div2{
+                width: 300px; height: 300px;
+                border-right-style: dashed;
+                border-right-color: rgb(25, 200, 100);
+                border-right-width: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+            CSS边框样式
+                border-style       边框样式
+                    solid   ：实线
+                    dashed  ：虚线
+                    dotted  ：点线
+
+                border-width     边框大小
+                    ...px
+                
+                border-color     边框颜色
+                    red   #f00   ...
+
+                边框也可以针对某一条边进行单独设置：border-left-style : 中间是方向 left 、 right 、 top 、bottom
+        -->
+
+
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </body>
+</html>

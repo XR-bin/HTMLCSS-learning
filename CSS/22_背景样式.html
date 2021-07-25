@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>背景样式</title>
+        <style type="text/css">
+            body{height: 7000px;}
+            div{
+                width: 500px; height: 500px; 
+                background-color: rosybrown; 
+                background-image: url(./img/图1.png);
+                background-repeat: no-repeat;
+                /* background-position: 50% 50%; */
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+            CSS背景样式
+                background-color    背景色
+
+                background-image    背景图
+                    url(背景图地址)
+                    默认：水平  垂直铺满背景图
+
+                background-repeat   平铺方式
+                    repeat-x    x轴平铺
+                    repeat-y    y轴平铺
+                    repeat      xy轴都平铺
+                    no-pepeat   都不平铺
+                
+                background-position    背景位置
+                    x   y   ： number或px或%
+                        x   ： left/center/rigth
+                        y   ： top/center/bottom
+
+            background-attachment    背景图随滚动条移动的方式
+                scroll ：默认值 (背景位置是按照当前元素进行偏移的)
+                fixed  ：(背景位置是按照浏览器进行偏移的,background-position也会以浏览器为基准设置位置)
+        -->
+
+        <div></div>
+    </body>
+</html>
