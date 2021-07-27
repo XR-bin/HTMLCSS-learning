@@ -12,6 +12,11 @@
             #p6{text-align: justify}
             /*#p7{line-height: 2;}*/   /*比例值的形式*/
             #p7{font-size: 32px;line-height: 20px;}   /*不要让字体大小>行高*/
+            #p8{letter-spacing: 10px;}
+            #p9{word-spacing: 10px;}
+            #p10{width: 150px; height: 150px; border-style: solid;}
+            #p11{width: 150px; height: 150px; border-style: solid; word-break: break-all;}
+            #p12{width: 150px; height: 150px; border-style: solid; word-wrap: break-word;}
         </style>
     </head>
     <body>
@@ -89,5 +94,30 @@
         <p id="p7">
             JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
         </p>
+
+
+
+
+        <!--  
+            letter-spacing : 字(字母)之间的间距
+            word-spacing： 单词之间的间距(只针对英文段落的)
+        -->
+        <p id="p8">JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。</p>
+        <p id="p8">This is the label that controls the spacing between words</p>
+
+        <p id="p9">JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。</p>
+        <p id="p9">This is the label that controls the spacing between words</p>
+
+
+
+
+        <!--  
+            解决英文和数字不自动折行的问题：
+                1、word-break：break-all;   (非常强烈的折行，不会产生大片空白区域)
+                2、word-wrap：break-word;   (不是那么强烈的折行，会产生一些大片空白区域)
+        -->
+        <p id="p10">Solve the 33333333333111111111222222222222 problem that English and numbers do not automatically fold</p>
+        <p id="p11">Solve the 33333333333111111111222222222222 problem that English and numbers do not automatically fold</p>
+        <p id="p12">Solve the 33333333333111111111222222222222 problem that English and numbers do not automatically fold</p>
     </body>
 </html>

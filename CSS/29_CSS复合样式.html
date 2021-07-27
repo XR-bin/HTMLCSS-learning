@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS复合样式</title>
+        <style type="text/css">
+            div{width: 300px; height: 300px;}
+        
+            div{
+                background: red url(./img/图1.png) no-repeat center center;
+                border: blue 10px solid;
+                /* font: bold italic; 错误写法 */ 
+                /* font: bold 12px;   错误写法 */
+                /* font: 30px 华文彩云;   正确写法 */
+                /* font: bold italic 30px 华文彩云;   正确写法 */
+                font: bold italic 30px/100px 华文彩云;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+            CSS复合样式
+                复合写法，是通过空格的方式实现的。
+
+            复合写法有的是不需要关心顺序，例如background、border；
+                background: red url() repeat 0 0;
+                border: 1px red solid
+
+            有的是需要关心顺序的，例如font
+                【注】font最少要有两个值  size  family ,不能是其他两个值
+                    正确写法
+                        weight style size family
+                        style weight size family
+                        weight style size/line-height family
+
+
+            【注】如果非要混合写法的话，那么要先写复合样式，再写单一样式，这样样式才不会被覆盖掉
+        -->
+
+        <div>这是用来测试CSS复合样式的div</div>
+    </body>
+</html>
