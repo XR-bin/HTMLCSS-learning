@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>段落CSS样式</title>
+        <style type="text/css">
+            #p1{width: 200px; text-decoration: underline line-through overline;}
+            #p2{text-transform: lowercase;}
+            #p3{text-transform: uppercase;}
+            #p4{text-transform: capitalize;}
+            #p5{text-indent: 2em;}
+            #p6{text-align: justify}
+            /*#p7{line-height: 2;}*/   /*比例值的形式*/
+            #p7{font-size: 32px;line-height: 20px;}   /*不要让字体大小>行高*/
+        </style>
+    </head>
+    <body>
+        <!--  
+            CSS段落样式
+                text-decoration    文本修饰
+                    下划线： underline
+                    删除线： line-through
+                    上划线： overline
+                    不添加任何修饰：none
+                    【注】允许添加多个文本修饰
+        -->
+        <p id="p1">
+            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
+        </p>
+
+
+
+
+
+        <!--  
+            text-transform    文本大小写(针对英文段落)
+                全小写；lowercase
+                全大写：uppercase
+                单词开头首字母大写：capitalize
+        -->
+        <p id="p2">
+            This IS AlL lOwercaSE
+        </p>
+
+        <p id="p3">
+            This IS AlL uppercase
+        </p>
+
+        <p id="p4">
+            this iS alL capitalize
+        </p>
+
+
+
+
+
+        <!--  
+            text-indent    文本缩进
+                首行缩进
+                en单位：相对单位，1em永远都是跟字体大小相同
+        -->
+        <p id="p5">
+            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
+        </p>
+
+
+
+
+
+        <!--  
+            text-align    文本对齐方式
+                对齐方式：left、right、center、justify(两端点对齐)
+        -->
+        <p id="p6">
+            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
+        </p>
+
+
+
+
+        <!--  
+            line-height     定义行高
+
+            什么是行高，一行文字的高度，上边距和下边距是等价关系
+            默认行高：不是固定值，而是变化的。根据当前文字的大小不断变化的
+
+            取值： 数字px   比例值(跟文字大小成比例的)
+        -->
+        <p id="p7">
+            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
+        </p>
+    </body>
+</html>

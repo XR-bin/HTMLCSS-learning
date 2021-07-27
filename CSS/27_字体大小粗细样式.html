@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>字体大小粗细样式</title>
+        <style type="text/css">
+            #div1{font-size: 30px;}
+            #div2{font-size: small;}
+            #div3{font-weight: normal;}
+            #div4{font-weight: 600;}
+            #div5{font-style: normal;}
+            #div6{font-style: italic;}
+            #div7{color: aqua;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            font-size   字体大小
+            默认字体大小是16px
+            写法：
+                1、font-size：数字px
+                2、font-size：单词
+
+            xx-small      最小
+            x-small       较小
+            small         小
+            medium        正常(默认值 16px)
+            large         大
+            x-large       较大
+            xx-large      最大
+
+            【注】不推荐单词的写法
+            【注】字体大小一般为偶数
+        -->
+        <div>原本字体大小(默认是16px)</div>
+        <div id="div1">通过 数字px 的方式改变字体大小</div>
+        <div id="div2">通过单词的方式改变字体大小</div>
+
+
+
+        <!--  
+            font-weight     字体粗细
+            只有两种模式：正常(normal)和加粗(bold)
+            写法：
+                1、font-weight: 单词(normal或bold)
+                2、font-weight: 数字(100/200/.../800/900)
+                        【注】100..500都是等价于normal ， 600...900都是等价于bold
+        -->
+        <div id="div3">字体正常粗细</div>
+        <div id="div4">字体加粗</div>
+
+        <!--  
+            font-style     字体样式
+                只有两种模式：正常(normal)和斜体(italic)
+                写法：font-style: 单词(normal或italic)
+
+                【注】oblique也是表示斜体的单词，但用的比较少，一般了解即可。
+                区别：  
+                    1、italic 是带有倾斜属性的字体才可以设置倾斜
+                    2、oblique 是没有倾斜属性的字体也可以强行设置倾斜操作
+        -->
+        <div id="div5">字体正常</div>
+        <div id="div6">字体斜体</div>
+
+        <!--  
+            color    字体颜色
+        -->
+        <div id="div7">我设置了字体颜色</div>
+    </body>
+</html>
