@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>标签选择器</title>
+        <style type="text/css">
+            /* div{width: 200px; border: 1px solid blue;} */
+
+            /* div{width: 200px; border: 1px solid blue;} */
+            /* #div1{width: 200px; border: 1px solid blue;} */
+            /* .div2{width: 200px; border: 1px solid blue;} */
+            /* div, #div1, .div1{width: 200px; border: 1px solid blue;} */
+
+            *{width: 200px; height: 600px; border: 1px solid blue;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            标签选择器(tag选择器)
+                div{}       <div></div>
+            
+            使用场景
+                1、去掉某些标签的默认样式时
+                2、复杂的选择器中，如层次选择器
+        -->
+        <!-- <div>这是一个标签选择器的案例</div>
+        <div>这是一个标签选择器的案例</div> -->
+
+
+
+        <!--  
+            群组选择器(分组选择器)
+                可以通过逗号的方式，给多个不同的选择器添加统一的CSS样式，来达到代码的复用
+        -->
+        <!-- <div>这是一个标签选择器</div><br/>
+        <div id="div1">这是一个id选择器</div><br/>
+        <div class="div2">这是一个class选择器</div><br/> -->
+
+
+
+        <!-- 
+            通配选择器 
+                *{ } -> div,ul,li,body,head......{ }
+
+                【注】尽量避免使用通配选择器，因为会给所有的标签添加样式，慎用。
+
+                使用场景
+                    1、去掉所有标签的默认样式时。
+        -->
+    </body>
+</html>

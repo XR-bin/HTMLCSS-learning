@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>class选择器</title>
+    </head>
+    <style type="text/css">
+        .box{width: 200px; border: 5px solid blue;}
+        p.box{background: yellow;}
+        .box1{background: red;}
+        .box.box1{border-left-color: green;}
+    </style>
+    <body>
+        <!--  
+            class选择器
+                .elem()      class="elem"
+
+            【注】
+                1、class选择器是可以复用的。
+                2、可以添加多个class样式。
+                3、多个样式的时候，样式优先级根据CSS决定，而不是class属性中的顺序。
+                4、标签+类的写法,例如p.box(注：它们之间不能有空格)
+        -->
+        <div class="box">这是一个box</div>
+        <div class="box">这是另一个box</div>
+        <p class="box">这是一个p标签的box</p>
+        <p class="box box1">这是一个有双类名的p标签</p>
+    </body>
+</html>

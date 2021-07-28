@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>伪类选择器</title>
+        <style type="text/css">
+            /* div{width: 200px; height: 200px; background: red;}
+            div:hover{background: blue;}
+            div:active{background: green;} */
+        
+            /* a:link{color: red}
+            a:visited{color: blue;} */
+
+            /* div, p{color: red;}
+            div:before{content: "Hello";}
+            p:after{content: "World"; color: blue;} */
+
+            /* input:checked{width: 100px; height: 100px;}
+            input:disabled{width: 200px; height: 200px;} */
+
+
+            input:focus{background: red;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            伪类选择器
+                CSS伪类用于向某些元素添加特殊的效果。一般用于初始样式添加不上的时候，用伪类来添加。
+
+            M:伪类()
+                :link      访问前的样式        (只能添加给a标签)
+                :visited   访问后的样式        (只能添加给a标签)
+                :hover     鼠标移入时的样式     (可以添加给所有标签)
+                :active    鼠标按下时的样式     (可以添加给所有的标签)
+
+            【注】
+                1、link visited 只能给a标签添加， hover active可以给所有标签添加
+                2、如果四个伪类都生效，一定要注意顺序：L  V  H  A
+                3、一般网站都只设置  a{}  a:hover{}
+        -->
+        <!-- :hover     鼠标移入时的样式     (可以添加给所有标签) -->
+        <!-- :active    鼠标按下时的样式     (可以添加给所有的标签) -->
+        <!-- <div></div> -->
+
+        <!-- :link      访问前的样式        (只能添加给a标签) -->
+        <!-- :visited   访问后的样式        (只能添加给a标签) -->
+        <!-- <a href="#">这是一个a标签</a> -->
+
+
+
+
+
+        <!--  
+            伪类选择器
+                通过伪类的方式给元素添加一段文本内容，使用content属性
+                :after (在...之后添加)   :before  (在...之前添加)     
+
+                针对表单元素   inpue的type="checked"
+                :checked (选择后触发)    :disabled  (设置为不可选择时触发)  
+
+                针对表单元素   inpue的type="text"
+                :focus    (聚焦时触发(出现光标))                   
+        -->
+
+        <!-- 通过伪类的方式给元素添加一段文本内容，使用content属性 -->
+        <!-- :after (在...之后添加)   :before  (在...之前添加) -->
+        <!-- <div> World</div>
+        <p>Hello </p> -->
+
+
+
+        <!-- 针对表单元素   inpue的type="checked" -->
+        <!-- :checked (选择后触发)    :disabled  (设置为不可选择时触发)  -->
+        <!-- <input type="checkbox" />
+        <input type="checkbox" />
+        <input type="checkbox" />
+        <input type="checkbox" disabled/> -->
+
+
+
+        <!-- 针对表单元素   inpue的type="text" -->
+        <!-- :focus    (聚焦时触发(出现光标))   -->
+        <input type="text" />
+    </body>
+</html>

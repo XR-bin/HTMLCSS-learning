@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>层次选择器</title>
+        <style type="text/css">
+            /* ul li{border: 1px solid blue;margin: 10px;} */
+            /* #ul1 > li{border: 1px solid red;margin: 10px;} */
+            /* p ~ div{border: 1px solid yellow;} */
+            p + div{border: 1px solid green;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            层次选择器
+                后代选择器  M N{ }
+                父子选择器  M > N{ }
+                兄弟选择器  M ~ N{ }  当前M标签下面的所有兄弟(同级)N标签
+                相邻选择器  M + N{ }  当前M标签下面相邻的第一个N标签
+        -->
+
+        <!-- 后代选择器  M N{ } -->
+        <!-- <ul>
+            <li>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
+
+
+        <!-- 父子选择器  M > N{ } -->
+        <!-- <ul id="ul1">
+            <li>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
+
+
+
+        <!-- 兄弟选择器  M ~ N{ }  当前M标签下面的所有兄弟(同级)N标签 -->
+        <!-- <div>这是个div1</div>
+        <p>这是个p1</p>
+        <div>这是个div2</div>
+        <ul>
+            <div>这是在ul里的div3</div>
+        </ul>
+        <div>这是个div4</div> -->
+
+
+
+
+        <!-- 相邻选择器  M + N{ }  当前M标签下面相邻的第一个N标签 -->
+        <div>这是个div1</div>
+        <p>这是个p1</p>
+        <div>这是个div2</div>
+        <div>这是个div3</div>
+        <ul>
+            <div>这是在ul里的div4</div>
+        </ul>
+        <div>这是个div5</div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>属性选择器</title>
+        <style type="text/css">
+            /* div[class]{border: 1px solid blue;} */
+
+            /* div[class="div2"]{border: 1px solid red;} */
+
+            /* div[class*="div"]{border: 1px solid green;} */
+
+            /* div[class^="div"]{border: 1px solid yellow;} */
+
+            /* div[class$="div2"]{border: 1px solid palevioletred;} */
+            div[class][id]{border: 1px solid orange;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            M[attr]{}   例如 div[class]{....}
+            M[attr=属性值]      =  ：完全匹配   
+            M[attr*=属性值]     *= ：部分匹配
+            M[attr^=属性值]     ^= ：起始匹配
+            M[artt$=属性值]     $= ：末尾匹配
+            M[artt][artt]..     组合匹配
+        -->
+
+        <!-- M[attr]{}   例如 div[class]{....} -->
+        <!-- 2,3 被渲染 -->
+        <!-- <div>0000000000</div>
+        <div id="div1">1111111111</div>
+        <div class="div2">2222222222</div>    
+        <div class="div3">3333333333</div> -->
+
+
+
+
+        <!-- M[attr=属性值]      =  ：完全匹配  -->
+        <!-- 2 被渲染 -->
+        <!-- <div>0000000000</div>
+        <div id="div1">1111111111</div>
+        <div class="div2">2222222222</div>    
+        <div class="div3">3333333333</div> -->
+
+
+
+
+        <!-- M[attr*=属性值]     *= ：部分匹配 -->
+        <!-- 2,3,4被渲染 -->
+        <!-- <div>0000000000</div>
+        <div id="div1">1111111111</div>
+        <div class="div2">2222222222</div>    
+        <div class="div3">3333333333</div>
+        <div class="4div4">4444444444</div> -->
+
+
+
+
+
+        <!-- M[attr^=属性值]     ^= ：起始匹配 -->
+        <!-- 2,3 被渲染 -->
+        <!-- <div>0000000000</div>
+        <div id="div1">1111111111</div>
+        <div class="div2">2222222222</div>    
+        <div class="div3">3333333333</div>
+        <div class="4div4">4444444444</div> -->
+
+
+
+
+        <!-- M[artt$=属性值]     $= ：末尾匹配 -->
+        <!-- 2 被渲染 -->
+        <!-- <div>0000000000</div>
+        <div id="div1">1111111111</div>
+        <div class="div2">2222222222</div>   
+        <div class="div2div3">2222222222</div>   
+        <div class="div3">3333333333</div>
+        <div class="4div4">4444444444</div>  -->
+
+
+
+
+        <!-- M[artt][artt]..     组合匹配 -->
+        <!-- 1 被渲染 -->
+        <div>0000000000</div>
+        <div id="div1" class="div1">1111111111</div>
+        <div class="div2">2222222222</div>   
+        <div class="div3">3333333333</div>
+        <div class="4div4">4444444444</div> 
+    </body>
+</html>
