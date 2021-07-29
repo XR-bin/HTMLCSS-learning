@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS样式的单一样式优先级</title>
+        <style type="text/css">
+            /* #id1{color: red;} */
+            /* .class2{color: blue;} */
+            /* div{color: blueviolet;} */
+            /* *{color: green;} */
+            body{color: indigo;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            CSS单一样式优先级
+                1、相同样式优先级
+                    当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况。
+                2、内部样式与外部样式
+                    内部样式和外部样式的优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高。
+                3、单一样式优先级
+                    style行间 > id > class > tag(标签) > * > 继承
+
+                【注】权重比例
+                    style行间     权重      1000
+                    id            权重      100
+                    class         权重      10
+                    tag           权重      1
+        -->
+
+        <div id="id1" class="class2">
+            这是一个div标签
+        </div>
+    </body>
+</html>

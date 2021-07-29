@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS样式继承</title>
+        <style type="text/css">
+            div{width: 200px; height: 200px; border: 1px solid blue; color: red; font-size: 20px;}
+            p{border: inherit;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            文字相关的样式可以被自动继承
+            布局相关的样式不能被自动继承
+
+            样式的inherit值，可以手动实现继承效果
+        -->
+        <div>
+            <p>这是一个在div容器内的p标签</p>
+        </div>
+    </body>
+</html>

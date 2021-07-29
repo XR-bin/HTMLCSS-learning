@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>结构性伪类选择器</title>
+        <style type="text/css">
+            /* nth-of-type(下标){}     nth-child(下标){} */
+            /* li:nth-of-type(1){background-color: aqua;} */
+            /* li:nth-of-type(n){background-color: aqua;} */
+            /* li:nth-of-type(2n){background-color: aqua;} */
+            /* li:nth-of-type(1){background-color: black;} */
+            /* li:nth-of-type(n){background-color: black;} */
+            /* li:nth-of-type(2n-1){background-color: black;} */
+
+            /* first-of-type    first-child  表示出现的第一个 */
+            /* li:first-of-type{background-color: blue;} */
+            /* li:first-child{background-color: blue;} */
+
+            /* last-of-type     last-child   表示出现的最后一个 */
+            /* li:last-of-type{background-color: rebeccapurple} */
+            /* li:last-child{background-color: rebeccapurple} */
+
+            /* only-of-type     only-child   表示当该标签只有一个时才生效 */
+            /* li:only-of-type{background-color: red;} */
+            /* li:only-child{background-color: red;} */
+
+            /* 区别 */
+            /* li:nth-of-type(2){background-color: salmon;} */
+            li:nth-child(2){background-color: skyblue;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            结构性伪类选择器
+                nth-of-type(下标){}     nth-child(下标){}
+                下标是从1开始的，1表示第一项，2表示第二项
+                下标可以填n，表示从0到无穷大
+                2n表示偶数
+                2n-1表示奇数
+
+                first-of-type    first-child  表示出现的第一个
+                last-of-type     last-child   表示出现的最后一个
+                only-of-type     only-child   表示当该标签只有一个时才生效
+
+                nth-of-type(){}和nth-of-child(){}之间的区别
+                    type：类型      不会将其他标签记录在下标数下
+                    child：孩子     会将其他标签记录在下标数下
+        -->
+        <!-- nth-of-type(下标){}     nth-child(下标){} -->
+        <!-- first-of-type    first-child  表示出现的第一个 -->
+        <!-- last-of-type     last-child   表示出现的最后一个 -->
+        <!-- <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
+        <!-- only-of-type     only-child   表示当该标签只有一个时才生效 -->
+        <!-- <ul>
+            <li></li>
+        </ul> -->
+
+
+        <!--  
+            nth-of-type(){}和nth-of-child(){}之间的区别
+                    type：类型      不会将其他标签记录在下标数下
+                    child：孩子     会将其他标签记录在下标数下
+        -->
+        <ul>
+            <li></li>
+            <div></div>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+</html>

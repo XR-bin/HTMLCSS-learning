@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS的层次优先级</title>
+    </head>
+    <body>
+        <!--  
+            层次优先级
+                权重比例表
+                    style行间     权重      1000
+                    id            权重      100
+                    class         权重      10
+                    tag           权重      1
+
+                1、权重比较法
+                    ul li .box p input{...}   权重值 1+1+10+1+1
+                    .hello span #elem{...}    权重值 10+1+100
+
+                    权重值越高，层次优先级越高
+
+                2、约分比较法
+                   ul li .box p input{...}     li p input   权重值  1+1+1
+                   .hello span #elem{...}      #elem        权重值  100
+        -->
+    </body>
+</html>

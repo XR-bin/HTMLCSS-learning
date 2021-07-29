@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>important和群组优先级</title>
+        <style type="text/css">
+            /* #id1{color: red;} */
+            /* .class2{color: blue !important;} */
+            /* div{color: green !important;} */
+
+
+
+            /* div.div1{color: blue;} */
+            /* .div1{color: red;} */
+
+
+            div,p{color: red;}
+            p{color: blue;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            !important
+                作用是提升样式优先级，非规范方式，不建议使用。(【注】!important不能针对继承的属性进行优先级提升)
+        -->
+        <!-- <div id="id1" class="class2">这是用来测试!important的div</div> -->
+
+
+
+        <!--  
+            标签+类与单类
+                标签+类 的优先级   >   单类 的优先级
+        -->
+        <!-- <div class="div1">这是个div标签</div> -->
+
+
+
+        <!--  
+            群组优先级
+                群组选择器与单一选择器的优先级相同，靠后写的优先级最高。
+        -->
+        <div>这是一个div标签</div>
+        <p>这是一个p标签</p>
+    </body>
+</html>
