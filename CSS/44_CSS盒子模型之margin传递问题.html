@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS盒子模型之margin传递问题</title>
+        <style type="text/css">
+            /* 问题组 */
+            #div1{
+                width: 200px; height: 200px; background-color: red;
+            }
+            #div2{
+                width: 100px; height: 100px; background-color: blue;
+                margin-top: 100px;
+            }
+
+            /***************** 解决方案 ****************/
+            /* 2、给父容器加边框。 */
+            /* #div1{
+                width: 200px; height: 200px; background-color: red;
+                border: 1px solid black;
+            }
+            #div2{
+                width: 100px; height: 100px; background-color: blue;
+                margin-top: 100px;
+            }  */
+
+            /* 3、子标签的margin-top换成父标签的padding-top(注意调整父标签的大小) */
+            /* #div1{
+                width: 200px; height: 100px; background-color: red;
+                padding-top: 100px;
+            }
+            #div2{
+                width: 100px; height: 100px; background-color: blue;
+            } */
+        </style>
+    </head>
+    <body>
+        <!--  
+            margin传递问题
+                margin传递问题只出现在嵌套的结构中，且只有margin-top会有传递
+                的问题，其他三个方向是没有传递问题的。
+
+            解决方案：
+                1、BFC规范。(这个后期课程会专门讲)
+                2、给父容器加边框。
+                3、3、子标签的margin-top换成父标签的padding-top(注意调整父标签的大小)
+        -->
+
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+    </body>
+</html>

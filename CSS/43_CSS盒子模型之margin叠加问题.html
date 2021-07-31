@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS盒子模型之margin叠加问题</title>
+        <style type="text/css">
+            #div1{
+                width: 200px; height: 200px; background-color: red;
+                margin-bottom: 40px;
+            }
+            #div2{
+                width: 200px; height: 200px; background-color: blue;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+            margin叠加问题
+                当给两个盒子同时添加上下外边距的时候，就会出现叠加的问题。这个问题，
+                只出现在上下margin有，左右margin是没有这个叠加问题的。
+
+            margin叠加会取上下margin值较大的作为叠加值
+
+            解决方案：
+                1、BFC规范(这个后面课程会专门讲)
+                2、想办法只给一个元素添加间距
+        -->
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </body>
+</html>
