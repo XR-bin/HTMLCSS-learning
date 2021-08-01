@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>overflow溢出隐藏</title>
+        <style type="text/css">
+            /* div{width: 200px; height: 200px; overflow: visible;} */
+            /* div{width: 200px; height: 200px; overflow: hidden;} */
+            /* div{width: 200px; height: 200px; overflow: scroll;} */
+            div{width: 200px; height: 200px; overflow: auto;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            溢出隐藏
+                overflow
+                    visible   当文字溢出容器高时，直接溢出,文字出界     默认值
+                    hidden    当文字溢出容器高时，溢出的文字部分不显示(文字一半溢出就只显示一半)
+                    scroll    出现上下滚动条和左右滚动条
+                    auto      出现上下滚动条
+
+                overflow-x 和 overflow-y 是分别针对xy轴分别设置的
+        -->
+        <div>
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+            文字溢出 文字溢出 文字溢出 文字溢出 文字溢出 文字溢出
+        </div>
+    </body>
+</html>

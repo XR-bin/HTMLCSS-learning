@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>标签嵌套规范</title>
+    </head>
+    <body>
+        <!--  
+            标签嵌套规定
+
+                有些是固定嵌套的
+                    比如：
+                        ul、li
+                        dl、dt、dd
+                        table、tr、td
+                
+                块标签能够嵌套内联标签
+                    例如
+                        <div>
+                            <span></span>
+                            <a href="#"></a>
+                        </div>
+
+                块标签不一定能嵌套块标签
+                        例如：
+                            下面的写法是允许的
+                                <div>
+                                    <div></div>
+                                </div>
+                            下面的写法是不允许的
+                                <p>
+                                    <div></div>
+                                </p>
+                
+                内联标签不能嵌套块标签(a标签是个例外)
+                        例如:
+                            下面的写法是错误的
+                                <span>
+                                    <div></div>
+                                </span>
+                            a标签是个例外，下面的写法是被允许的
+                                <a href="#">
+                                    <div></div>
+                                </a>
+        -->
+    </body>
+</html>

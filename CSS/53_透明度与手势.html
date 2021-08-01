@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>透明度与手势</title>
+        <style type="text/css">
+            #box1{width: 200px; height: 200px; background-color: red; opacity: 0.5;}
+            #box2{width: 200px; height: 200px; background-color: rgba(255, 0, 0, 0.5);}
+            #box3{width: 200px; height: 200px; background-color: blue; cursor: url(./img/cursor.ico), auto;}
+        </style>
+    </head>
+    <body>
+        <!--  
+            opacity：0(透明) ~ 1(不透明)    0.5(半透明)
+
+            【注意】opacity为0的时候，是会占空间，且所有子内容也会受到透明度的影响
+        -->
+        <div id="box1">这是一个块</div>
+
+
+        <!--  
+            rgba
+                rgba(红, 绿, 蓝, 透明度);
+
+                【注意】可以让指定的标签样式透明，而不影响子内容
+        -->
+        <div id="box2">这也是一个块</div>
+
+
+        <!--  
+            cursor : 手势(鼠标样式)
+                default   箭头   默认值
+                ...
+
+                实现自定义样式
+                    准备图片格式： .cur   、  .ico
+                    格式    cursor: url(图片地址), auto;
+        -->
+        <div id="box3"></div>
+    </body>
+</html>
