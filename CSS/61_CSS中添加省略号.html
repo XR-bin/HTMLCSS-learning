@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS中添加省略号</title>
+    <style type="text/css">
+      div{
+        border: 1px red solid;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+    </style>
+  </head>
+  <body>
+    <!--  
+      css添加省略号
+        width   必须有一个固定宽度
+        white-space: nowrap    不让内容折行
+        overflow:hidden       隐藏溢出内容
+        text-overflow: ellipsis   添加省略号
+    -->
+    <div>
+      这是一堆文字这是一堆文字这是一堆文字这是一堆文字这是一堆文字这是一堆文字
+    </div>
+  </body>
+</html>

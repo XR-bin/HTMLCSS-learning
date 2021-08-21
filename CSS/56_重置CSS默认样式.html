@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>重置CSS默认样式</title>
+  </head>
+  <body>
+    <!-- 
+      一般需要重置CSS默认样式
+          1、*{margin: 0; padding: 0;}
+                优点：不用考虑哪些标签有默认的margin和padding样式
+                缺点：稍微的影响性能(这点影响可以忽略不计)
+                如果在意性能影响的话就找出需要消除默认margin和padding的标签
+                例如：body,p,h1,ul{margin: 0; padding: 0;}
+          
+          2、ul{ list-style: none;}       取消列表项标识符
+          
+          3、a{ text-decoration: none; color: #999;}       取消a标签的下划线和默认颜色
+          
+          3、img{ dispay: block} 或者 img{vertical-align: bottom;}
+            解决的问题：图片跟容器底部存在一些空隙
+            产生的原因：内联元素的对齐方式是按照文字基线对齐的，而不是文字底线对齐的
+                    【补充】：文字基线  就是我们小学用英语簿中的四线谱中的第三根线
+                              文字底线  就是那第四根线
+                              
+      写具体网页的时候或者一个布局效果的时候：
+          1、写结构(HTML搭建框架)
+          2、css样式重置
+          3、写具体样式
+    --> 
+  </body>
+</html>

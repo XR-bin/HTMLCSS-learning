@@ -1,0 +1,41 @@
+*{ margin: 0; padding: 0;}                          /*去除默认外边距和内边距*/
+ul,ol{list-style: none;}                            /*去除列表默认序号*/
+img{display: block;}                                /*图片以块形式显示*/
+a{text-decoration: none; color: #646464;}         /*去除a标签默认下划线和颜色*/
+h1,h2,h3{font-size: 16px;}                          /*给标题统一字体大小*/
+body{font-family: Arial;}                           /*设置统一字体类型为Arial*/
+
+.l{float: left;}                                               /*左浮动*/
+.r{float: right;}                                              /*有浮动*/
+.clear::after{content: ''; display: "block"; clear: both;}     /*清除浮动*/
+.container{width: 1080px; margin: 0 auto; position: relative;}
+.container-fluid{width: 100%;}
+
+
+
+#head {height: 81px;}
+#head .head_logo{width: 162px; height: 44px; margin-top: 19px;}
+#head .head_menu{font-size: 14px; line-height: 81px;}
+#head .head_menu li{float: left; margin-left: 51px;}
+
+
+
+#banner{position: relative;}
+#banner .banner_list{width: 100%; height: 469px; position: relative;}
+#banner .banner_list li{
+    width: 100%; height: 100%;
+    background-position: center 0; background-repeat: no-repeat;
+    position: absolute; left: 0; top: 0; z-index: 1;
+  }
+#banner .banner_list li.active{opacity: 1; z-index: 10;}
+#banner .banner_list a{display: block; width: 100%; height: 100%;}
+#banner .banner_btn li.active{background-color: white;}
+#banner .banner_btn{width: 100%; position: absolute; bottom: 19px; z-index: 20; font-size: 0; text-align: center;}
+#banner .banner_btn li{
+  display: inline-block;
+  width: 12px; height: 12px;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-sizing: border-box; margin: 0 6px; 
+  cursor: pointer;
+}

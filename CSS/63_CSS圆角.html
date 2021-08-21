@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS圆角</title>
+    <style type="text/css">
+      /* #box1{width: 200px; height: 200px; background-color: red; border-radius: 20px;} */
+      /* #box1{width: 200px; height: 200px; background-color: red; border-radius: 20px 10px;} */
+      /* #box1{width: 200px; height: 200px; background-color: red; border-radius: 50px 20px 10px;} */
+      /* #box1{width: 200px; height: 200px; background-color: red; border-radius: 50px 30px 15px 5px;} */
+      #box1{width: 200px; height: 200px; background-color: red; border-radius: 20px / 40px;}
+      
+      /* 圆 */
+      /* #box1{width: 200px; height: 200px; background-color: red; border-radius: 100px;} */
+      /* 半圆 */
+      /* #box1{width: 200px; height: 100px; background-color: red; border-radius: 100px 100px 0px 0px;} */
+      
+    </style>
+  </head>
+  <body>
+    <!--  
+      border-radius   给标签添加圆角
+            只有1个数值      上下左右四个角
+            两个数值         左上角 右下角     右上角 左下角 
+            三个数值         左上角       右上角 左下角       右下角     
+            四个数值         左上角      右上角      右下角      左下角
+            
+            
+            如果数值是 20px/40px   表示相切圆的  圆高/圆宽
+    -->
+    <div id="box1"></div>
+  </body>
+</html>

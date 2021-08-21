@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS精灵(也称为CSS雪碧)</title>
+    <style type="text/css">
+      #box1{
+        width: 20px; height: 21px;
+        background-image: url(img/sprite_icon.png);
+        background-repeat: no-repeat;
+        background-position: left -596px;
+      }
+      
+      #box2{
+        width: 300px; height: 50px;
+        border: 1px black solid;
+        line-height: 50px; padding-left: 30px;
+        background: url(img/sprite_icon.png) no-repeat right -530px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  
+      CSS Sprite
+          特性
+            CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允许你将一个页面涉及的所有
+          零星图片都包含到一张大图中去加载。
+    -->
+    <div id="box1"></div>
+    <div id="box2">产品中心</div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>清除浮动</title>
+    <style type="text/css">
+      /* #box1{width: 100px; height: 100px; border: ipx black solid; background-color: blue; float: left;} */
+      /* #box1{width: 100px; height: 100px; border: ipx black solid; background-color: blue; float: right;} */
+      /* #box2{width: 200px; height: 200px; background-color: red; clear: left;} */
+      
+      #box3{
+        width: 200px;border: 1px solid black;
+        /* height: 200px; */
+        /* float: left; */
+        /* overflow: hidden; */
+        /* display: inline-block; */
+      }
+      .clear:after{content: ''; clear: both; display: block;}
+      #box4{width: 100px; height: 200px; background-color: red; float: left;}
+    </style>
+  </head>
+  <body>
+    <!--  
+      清除浮动
+        上下排列：cleat属性，表示清除浮动的。值为  left right both
+        嵌套排列：
+              固定高度：不推荐，不能把高度固定死，不适合在自适应的效果。
+            父元素浮动：不推荐，因为父容器浮动也会影响到后面的元素。
+             overflow： hidden(BFC规范)，如果有子元素想溢出，那么会受到影响
+              display： inline-block (BFC规范)，不推荐，父容器会影响到后面的元素
+            设置空标签： 不推荐，会多添加一个标签
+            after伪类：  推荐，是空标签的加强版，目前各大公司的做法
+            
+            
+            【注】:after用来创建一个伪元素，作为已选中元素的最后一个子元素。
+                  通常会配合content属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
+                  
+            【注】clear只对块元素有用，对内联标签不起作用
+    -->
+    <!-- <div id="box1"></div>
+    <div id="box2"></div> -->
+    
+    <div id="box3" class="clear">
+      <div id="box4"></div>
+      <!-- <div style="clear: left;"></div> -->
+    </div>
+    <span>123</span>
+    
+  </body>
+</html>
