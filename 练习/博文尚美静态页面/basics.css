@@ -8,8 +8,8 @@ body{font-family: Arial;}                           /*设置统一字体类型�
 .l{float: left;}                                               /*左浮动*/
 .r{float: right;}                                              /*有浮动*/
 .clear:after{content: ''; display: block; clear: both;}     /*清除浮动*/
-.container{width: 1080px; margin: 0 auto; position: relative;}
-.container-fluid{width: 100%;}
+.container{width: 1080px; margin: 0 auto; position: relative;}    /*通栏*/
+.container-fluid{width: 100%;}                                    /*版心*/
 
 
 
