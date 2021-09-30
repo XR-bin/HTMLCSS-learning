@@ -1,0 +1,220 @@
+1. HTML 和 XHTML的区别
+
+    DOCTYPE文档及编码    html5简答                             xhtml复杂
+    元素大小写           html5可大小写                         xhtml只能小写
+    属性布尔值           html5可省略，默认是true                xhtml不能省略
+    属性引号             html5给属性赋值，属性值可以不加引号     xhtml必须加引号
+    单标签               html5单标签结束可以不加/               xhtml必须加/
+    图片的alt属性        html5可以不要alt属性                   xhtml必须要有alt属性
+    双标签闭合           html5可以不闭合，但为规范还是默认要      xhtml必须要 
+
+
+
+2. strong与b  、  em与i  
+
+    形式表现上都是 字体加粗 和 字体倾斜
+
+    区别在于strong和em具备语义化，b和i只是单纯字体改变
+
+
+
+3. 引用标签
+
+    blockquote： 引用大段的段落解释   会占一个块区
+    q:           引用小段的短语解释   会自带双引号
+    abbr：       缩写或首字母缩略词
+    address：    引用文档地址信息
+    cite：       引用著作的标题
+
+
+
+4. iframe标签 
+
+    可以引入其他的html到当前html页面中显示
+    主要是利用iframe的属性进行样式的调节。
+
+
+
+5. br 与 wbr
+
+    br 就是单纯的换行操作
+    wbr 是软换行(指定时机进行换行,即一个长单词，我们不要让它整个换行，而是要分段换行就用wbr)
+
+
+
+6. pre 与 code
+
+    pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。
+    code 元素表内部内容为计算机代码文本,【注意】"<" 和 ">" 必须用&lt;和&gt;代替，双引号要用&quot;代替，否则会被当做标签识别
+
+    这两个组合是针对网页中的程序代码的显示效果
+
+
+
+7. map 与 area 
+
+    map给图片添加热区域 通过map的name和img的usemap进行绑定
+    area能添加的热区域形状和链接：矩形、圆形、多边形
+
+
+
+8、 audio 与 video 
+
+    audio   引入音频
+    video   引入视频
+
+    引入音频与视频的标签。属于H5的功能。
+
+
+
+9. 文字注解
+    
+    ruby 和 rt 配合使用给文字加上注拼音的效果
+    ruby 、 rt 必须组合使用
+
+
+
+10. 改变文本方向
+
+    bdo 标签可覆盖默认的文本方向
+
+    重点是bdo标签的dir属性
+        ltr 从左向右的文本方向
+        rtl 从右向左的文本方向
+
+
+
+11. embed 与 object
+
+    给flash和一些插件进行渲染操作的标签。
+
+    embed 和 object 作用相同，只能为了解决浏览器兼容才出现两个不同标签
+
+    【注】object 元素需要配合param 元素一起完成
+
+
+
+12. link拓展学习
+
+    1)添加网址标题栏前的小图标
+        <link rel="icon" type="./img/x-icon" href="http://www.mobiletrain.org/favicon.ico">
+    2)提前DNS解析(我们访问一个网址时写的是域名，但最后浏览器需要把它解析为IP才能访问，
+                如百度域名为www.baidu.com，它的IP地址为183.232.231.172)
+      我们提前DNS解析域名可以加快访问网页速度
+        <link rel="dns-prefetch" href="https://www.baidu.com">
+
+
+
+13. meta拓展学习
+
+    meta标签添加辅助信息(便于被爬虫所爬到)
+
+        1) name="description" 信息描述
+        <meta name="description" content="大连美团网精选大连美食餐厅,酒店预订,电影票,旅游景点,外卖订餐,大连团购信息,您可查询商家评价店铺信息。大连生活,下载美团官方APP ,吃喝玩乐1折起。">
+        2) name="keywords"  关键字
+        <meta name="keywords" content="大连美食,大连酒店,大连团购">
+        3) name="renderer"  浏览器内核选择
+        <meta name="renderer" content="webkit">
+        4) http-equiv="X-UA-Compatible" 主要针对IE，让IE以最高版本的edge进行渲染
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        5) http-equiv="refresh" 延时一段时间后主动跳转到某个网页
+        <meta http-equiv="refresh" content="3" url="www.baidu.com">
+        6) http-equiv="expires" 在某个时间段前只读取服务器缓存的内容，不直接在服务器内获取新内容
+        <meta http-equiv="expires" content="Wed, 20 Jun 2019 22:33:00 GMT">
+
+
+
+14. HTML5新的语义化标签
+
+    header ： 页眉
+    footer ： 页脚
+    main   ： 主体
+    hgroup ： 标题组合
+    nav    ： 导航
+
+    【注】header 、 footer 、 main 在一个网页中只能出现一次
+
+    article ： 独立的内容
+    aside   ： 辅助信息的内容
+    section ： 区域
+    figure  ： 描述图像或视频
+    figcaption ： 描述图像或视频的标题部分
+
+    datalist ： 选项列表
+    option   :  可选项标签
+    details / summary ：文档细节 /文档标题
+    progress / meter  ：定义进度条 / 定义度量范围
+    time ： 定义日期或时间
+    mark ： 带有记号的文本
+
+
+
+15. 表格拓展学习
+
+        添加单线 ：border-collapse : collapse
+        隐藏空单元 ：empty-cells ：hide
+        斜线分类 ： border / rotate
+        列分组 ： colgroup / col
+
+
+
+16. 表单拓展学习
+
+    美化表单控件： 
+                label + :checked
+                position + opacity
+
+    新的input控件   
+        email ： 电子邮件地址输入框
+        url   ： 网址输入框
+        number： 数值输入框
+        range ： 滑动条
+        date / month / week ： 日期控件
+        search ： 搜索框
+        color ： 颜色板
+        tel ： 电话号码输入框( 在移动端会默认调起数字键盘 )
+        time ：时间控件
+
+    
+    表单属性：
+        autocomplete ： 自动完成(出现下拉补全之前有输入过的历史记录)  默认 on   /   off
+        autofocus ： 获取焦点(进去页面后就聚焦)
+        require ： 不能为空
+        pattern ： 正则验证
+
+        method ：数据传输方式         get或post
+        enctypr ： 数据传输类型(在post方式下需要加这个属性)
+            发送字符   enctypr="application/x-www-form-urlencoded"
+            上传文件   enctypr="multipart/form-data"
+        name / value ：数据的键值对
+
+    拓展标签：
+        fieldset ： 表单内元素分组
+        legend   ： 为fieldset元素定义标题
+        optgroup ： 定义选项
+
+
+
+17. BFC规范
+
+    具有 BFC 特性的元素可以看作是隔离了的独立容器，容器
+    里面的元素不会在布局上影响到外面的元素，并且 BFC 具
+    有普通容器所没有的一些特性。
+
+    触发BFC规范的元素，可以形成一个独立的容器。不受到外
+    界的影响，从而解决一些布局问题。
+
+    触发BFC的方式
+        设置浮动元素：float 除 none 以外的值
+        设置绝对定位元素：position (absolute、fixed) 
+        设置display 为 inline-block、table-cells、flex
+        设置overflow 除了 visible 以外的值 (hidden、auto、scroll)
+
+
+
+
+
+
+
+
+

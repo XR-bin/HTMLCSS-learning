@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BFC规范</title>
+    </head>
+    <style>
+        .div1 { width: 100px; height: 100px; background-color: red; margin-bottom: 30px; }
+        .div2{ width:100px; height:100px; background:blue; margin-top: 30px;}
+        .box{display: flex;}
+
+
+        .div3{ width:200px; height:200px; background:red;  overflow: hidden;}
+        .div4{ width:100px; height:100px; background:blue; margin-top:50px;}
+
+
+        .div5{ width:200px; border:1px black solid; display: inline-block;}
+        .div6{ width:100px; height:100px; background:blue; float:left;}
+
+
+        .div7{ width:100px; height:100px; background:red; float:left;}
+        .div8{ height:400px; background:blue; overflow: hidden;}
+    </style>
+    <body>
+        <!-- 
+            如果不触发BFC规范，则这两个div的margin-bottom 和 margin-top 会重叠
+         -->
+        <!--         
+        <div class="box">
+            <div class="div1"></div>
+        </div>
+        <div>
+            <div class="div2"></div>
+        </div>  
+        -->
+       
+        <!--  
+            如果不触发BFC规范，div3也会受到div4的margin-top影响
+        -->
+        <!--         
+        <div class="div3">
+            <div class="div4"></div>
+        </div> 
+        -->
+
+        <!--  
+            如果不触发BFC规范，div5会因为div6浮动而没法撑开
+        -->
+        <!--         
+        <div class="div5">
+            <div class="div6"></div>
+        </div> 
+         -->
+
+         <!--  
+             如果不触发BFC规范，div7会因为浮动而覆盖到div8上
+         -->
+         <div class="div7"></div>
+         <div class="div8">啊飒飒所大所多大多大时代</div>
+    </body>
+</html>

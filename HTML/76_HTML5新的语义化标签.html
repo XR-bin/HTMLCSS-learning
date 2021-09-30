@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5的新语义标签</title>
+    </head>
+    <body>
+        <!-- 
+            header   /ˈhedə(r)/
+            hgroup   / h  ɡruːp/
+            nav      /ne v/
+        -->
+        <header>
+            <hgroup>
+                <h1>主标题</h1>
+                <h2>副标题</h2>
+            </hgroup>
+            <nav>
+                <ul>
+                    <li>首页</li>
+                    <li>论坛</li>
+                    <li>关于</li>
+                </ul>
+            </nav>
+        </header>
+        <!--
+            main      /meɪn/ 
+            article   /ˈɑːtɪkl/
+            section   /ˈsekʃn/
+            datalist  /deɪtə lɪst/
+            option    /ˈɒpʃn/
+            details   /'dɪteɪlz/
+            summary    /ˈsʌməri/
+            progress   /prɑːɡres/
+            meter      /ˈmiːtər/
+            mark       /mɑːk/
+        -->  
+        <main>
+            <article>
+                <section>
+                    <input type="text" list="list" />
+                    <datalist id="list">
+                        <option value="a"></option>
+                        <option value="b"></option>
+                        <option value="c"></option>
+                        <option value="d"></option>
+                        <option value="e"></option>
+                    </datalist>
+                    <details open>
+                        <summary>HTML</summary>
+                        <p>超文本标记语言</p>
+                    </details>
+                    <progress max="10" min="0" value="3"></progress>
+                    <!-- 
+                        high > value > log  绿色
+                        否则进度条为黄色
+                     -->
+                    <meter max="100" min="0" value="90" low="50" high="80"></meter>
+                    <p>
+                        今天是<time title="2-14">情人节</time>，街上人很多。
+                    </p>
+                    <p>
+                        今天是<mark>情人节</mark>，街上人很多。
+                    </p>
+                </section>
+                <!--  
+                    figure       /ˈfɪɡjər/
+                    figcaption   /fɪɡˈkæpʃn/
+                    aside        /əˈsaɪd/
+                    footer       /ˈfʊtər/ 
+                -->
+                <section>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="./img/youku.jpg" />
+                                <figcaption>
+                                    新水果篮子❤️高甜<br>
+                                    十二生肖恋上美少女！
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <aside></aside>
+        </main>
+        <footer></footer>
+    </body>
+</html>
