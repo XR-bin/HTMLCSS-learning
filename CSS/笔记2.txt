@@ -1,0 +1,116 @@
+1. 浏览器前缀
+
+    CSS3去兼容不同的浏览器，针对旧的浏览器做兼容，新浏览器基本不需要添加前缀。
+    
+    这是因为以前浏览器厂商就一直在实施CSS3，但那是还没有标准的CSS3规范，所以各做各的。
+    现在已经有CSS3标准了(个别CSS3标准还在波动调整)，所以才出现前缀。
+       
+       浏览器      内核        前缀
+        IE       Trident      -ms-
+      Firefox     Gecko       -moz-
+       Opera      Presto       -o-
+      Chrome      Webkit     -webkit- 
+      Safari      Webkit     -webkit- 
+
+
+
+2. transtion 过渡
+
+    transition-property ：规定设置过渡效果的CSS属性的名称
+    transition-duration ：规定完成过渡效果需要多少秒或毫秒
+    transition-delay    ：规定过渡效果何时开始。(数值为正：延迟    数值为负：提前)
+    transition-timing-function  :  规定速度效果的速度曲线。
+
+    【注意】不要加到hover上。
+
+
+
+3. transform变形
+
+    translate ： 位移
+        translateX
+        translateY
+        translateZ  (3D特效)
+
+    scale ：缩放 (值是一个比例值，正常大小就是1，会已当前元素中心点进行缩放)
+        scaleX
+        scaleY
+        scaleZ   (3D特效)
+
+    rotate : 旋转 (旋转值，单位是角度deg)
+        rotateX   (3D特效)
+        rotateY   (3D特效)
+        rotateZ   ( 和rotate是等级关系，那正值按顺时针旋转，负值按逆时针旋转 )
+
+    skew : 斜切
+        skewX ：单位也是角度，正值向左倾斜，负值向右倾斜
+        skewY
+
+    transform的注意事项：   
+        1)变形操作不会影响其他元素
+        2)变形操作只能添加给块元素，但不能添加给内联元素(内联块可以)
+        3)复合写法，可以同时添加多个变形操作。但执行是有顺序的
+          先执行后面的操作，在执行前面的操作
+          translate会受到 rotate、scale、skew的影响
+        4)transform-origin ： 基点位置 (x,y,z)
+
+
+
+4. animation动画
+
+    animation-name      ：设置动画的名字(自定义)
+    animation-duration  ：动画的持续时间
+    animation-delay : 动画的延迟时间
+    animation-iteration-count : 动画的重复次数 ，默认值就是1 ，infinite无限次数
+    animation-timing-function : 动画的运动形式
+
+    【注意】
+        1) 运动结束后，默认情况下会停留在起始位置
+        2) @keyframes里的 from === 0%    to === 100%
+
+    animation-fill-mode: 规定动画播放之前或之后，其动画效果是否可见。
+        none(默认值) : 在运动结束之后回到初始位置，在延迟的情况下，让0%在延迟后生效
+        backwards  :  在延迟的情况下，让0%在延迟前生效
+        forwards  :  在运动结束的之后，停到结束位置
+	 	both  :  backwards和forwards同时生效
+
+    animation-direction : 属性定义是否应该轮流反向播放动画。
+        alternate  :  一次正向(0%~100%)，一次反向(100%~0%)
+	 	reverse : 永远都是反向 , 从100%~0%
+	 	normal (默认值) : 永远都是正向 , 从0%~100%
+
+
+
+5. animate.css
+    这是一个强大的预设css3动画库
+        官网地址：https://daneden.github.io/animate.css/
+
+    基本使用：
+        在class属性是写下一下类名
+            animate__animated : 基类(基础的样式，每个动画效果都需要加)
+            animate__infinite : 动画的无限次数
+            animate__效果名字  ：通过官网查看自己需要的动画效果，把名字拷贝下来就行了
+
+
+
+6. 3D效果操作
+
+    transform:
+        rotateX() : 正值向上翻转
+        rotateY() : 正值向右翻转
+        translateZ() : 正值向前，负值向后
+        scaleZ() : 立体元素的厚度
+
+    3d写法  
+        scale3d() : 3个值 x y z
+        translate3d() : 三个值 x y z
+	    rotate3d() : 四个值 0|1(x轴是否添加旋转角度)  0|1(y轴是否添加旋转角度)  0|1(z轴是否添加旋转角度)  角度deg
+
+    perspective（景深）: 离屏幕多远的距离去观察元素，值越大幅度越小。
+
+    perspective-origin : 景深-基点位置，观察元素的角度。
+
+    transform-origin: center center -50px;   （Z轴只能写数值，不能写单词）
+
+
+

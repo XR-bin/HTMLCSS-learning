@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>transform</title>
+        <style>
+            .box1{ width: 300px; height: 300px; border: 1px black solid; margin: 30px auto; }
+            .box2{ width:100px; height:100px; background:red; transition:2s;}
+            /* 
+                transition     /trænˈsɪʃn/
+                hover          /ˈhʌvər/
+                transform      /trænsˈfɔːrm/
+                translate      /trænsˈleɪt/
+                scale          /skeɪl/
+                rotate         /ˈroʊteɪt/
+                skew           /skjuː/
+            */
+            .box1:hover .box2 {
+                /* transform: translateX(100px); */
+                /* transform: scaleX(50%); */
+                
+                /* transform: translate(100px, 100px); */
+                /* transform: scale(2); */
+
+                /* transform: rotateZ(45deg); */
+
+                transform: skew(-30deg, -30deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div class="box2"></div>
+            aaaaaa
+        </div>
+    </body>
+</html>

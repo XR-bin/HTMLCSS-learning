@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform注意事项</title>
+    <style>
+        /*
+            origin     /ˈɔːrɪdʒɪn/
+        */
+        /* .box1{ width: 100px; height: 100px; background-color: red; transition: 1s; } */
+        .box1{ width:100px; height:100px; background:red; transition: 1s; transform-origin: 100px 100px;}
+        .box1:hover{ transform: scale(0.5); }
+
+        /* 
+        .box2{ width: 100px; height: 100px; background-color: blue; transition: 3s; }
+        .box2:hover{ transform: translate(100px,0) scale(.5); }
+        .box3{ width: 100px; height: 100px; background-color: green; transition: 3s; }
+        .box3:hover{ transform: scale(.5) translate(100px,0); } 
+        */
+
+        .box2{ width: 100px; height: 100px; background-color: blue; transition: 3s;  transform: translate(100px,0) rotate(45deg); }
+        .box3{ width: 100px; height: 100px; background-color: green; transition: 3s; transform: rotate(45deg) translate(100px,0); }
+
+        /* .box4{ background-color: yellow; transition: 1s; } */
+        /* .box4{ background-color: yellow; transition: 1s; display: block; width: 50px; } */
+        .box4{ background-color: yellow; transition: 1s; display: inline-block; }
+        .box4:hover{ transform: translateX(100px) }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <span class="box4">1234</span>
+</body>
+</html>

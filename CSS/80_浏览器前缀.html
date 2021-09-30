@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>浏览器前缀</title>
+        <style>
+            /*
+               animation   /ˌænɪˈmeɪʃn/
+               keyframes   /kiːfˈreɪm/
+               opacity     /oʊˈpæsəti/
+            */
+            /*             
+            div { 
+                width: 200px; height: 200px; background-color: red;
+                animation: 5s move; 
+            }
+            @keyframes move {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            } 
+            */
+            /*             
+            div { 
+                width: 200px; height: 200px; background-color: red;
+                -webkit-animation: 5s move; 
+            }
+
+            @-webkit-keyframes move {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            } 
+            */
+
+            div { 
+                width: 200px; height: 200px; background-color: red;
+                -ms-animation: 5s move; 
+            }
+
+            @-ms-keyframes move {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            } 
+
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

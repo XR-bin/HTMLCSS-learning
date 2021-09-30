@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation动画</title>
+    <style>
+        /*
+            animation   /ˌænɪˈmeɪʃn/
+            keyframes   /kiːfˈreɪm/
+            duration       /duˈreɪʃn/ 
+            delay          /dɪˈleɪ/
+            timing         /ˈtaɪmɪŋ/
+            iteration      /ˌɪtəˈreɪʃn/
+            count          /kaʊnt/
+        */
+        .box1{ width:300px; height:300px; border:1px black solid; margin:30px auto;}
+        /*         
+        .box2{ 
+            width:100px; height:100px; background:red; 
+            animation-name: myBox;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        } 
+        */
+
+        .box2{ 
+            width:100px; height:100px; background:red; 
+            animation:myBox 4s 2s infinite linear;
+        }
+
+        @keyframes myBox {
+            /*
+            from { width: 100px; }
+            to { width: 200px; }
+            */
+
+            0%{ transform: translate(0,0); }
+            25%{transform : translate(200px,0);}
+            50%{ transform : translate(200px,200px); }
+            75%{ transform : translate(0,200px); }
+            100%{ transform : translate(0,0); }
+        }
+
+
+        .box3{
+            width: 100px; height: 100px; background-color: blue;
+            animation: myBox3 4s 0s infinite linear;
+            /*
+                fill     /fɪl/
+                mode     /moʊd/
+                none     /nʌn/
+                backwards   /ˈbækwərdz/
+                forwards    /ˈfɔːrwərdz/
+                both        /boʊθ/
+                direction   /dəˈrekʃn/
+                alternate   /ˈɔːltərnət/
+                reverse     /rɪˈvɜːs/
+                normal      /ˈnɔːml/
+            */
+            /* animation-fill-mode: none; */
+            /* animation-fill-mode: backwards; */
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode: both; */
+
+
+            /* animation-direction: normal;  */
+            /* animation-direction: reverse; */
+            animation-direction: alternate;
+        }
+
+        @keyframes myBox3 {
+            0%{ transform: translateX(0px); }
+            100%{ transform: translateX(300px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+</body>
+</html>
