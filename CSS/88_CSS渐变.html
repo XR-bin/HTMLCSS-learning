@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS渐变</title>
+        <style>
+            .box1{ 
+                width:300px; height:300px; 
+                border:1px black solid; 
+                /*
+                    linear     /ˈlɪniər/
+                    gradient   /ˈɡreɪdiənt/
+                */
+                background-image:linear-gradient(red , blue , yellow , green)
+            }
+
+            .box2{ 
+                width:300px; height:300px; 
+                border:1px black solid; 
+                background-image:linear-gradient(to right bottom ,red , blue)
+            }
+
+            .box3 { 
+                width:300px; height:300px; 
+                border:1px black solid; 
+                background-image:linear-gradient( 45deg ,red , blue)
+            }
+            .box4 { 
+                width:300px; height:300px; border:1px black solid;
+                background-image:linear-gradient(red 25% , blue 75%)
+            }  
+            
+            /*
+                radial    /ˈreɪdiəl/
+            */
+            .box5 { 
+                width:300px; height:300px; border:1px black solid; 
+                background-image:radial-gradient(red 25%,blue 50%,yellow 75%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </body>
+</html>

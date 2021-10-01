@@ -108,9 +108,74 @@
 
     perspective（景深）: 离屏幕多远的距离去观察元素，值越大幅度越小。
 
-    perspective-origin : 景深-基点位置，观察元素的角度。
+    perspective-origin : x  y   景深-基点位置，观察元素的角度。能填的值(left  center right length %)
 
-    transform-origin: center center -50px;   （Z轴只能写数值，不能写单词）
+    transform-origin: center center -50px;   （Z轴只能写数值，不能写单词）   （Z轴只能写数值，不能写单词）
+
+    backface-visibility : 背面隐藏
+	    hidden、visible (默认值)
+
+
+
+7. CSS提供了扩展背景样式
+    background-size： 背景图的尺寸大小
+        宽 高;
+        cover;     覆盖
+        contain;   包含
+
+    background-origin : 背景图的填充位置
+	    padding-box (默认)
+	    border-box
+	    content-box
+
+    background-clip : 背景图的裁切方式
+	    padding-box 
+	    border-box (默认) 
+	    content-box 
+
+    注：复合样式的时候，第一个是位置，第二个是裁切
+
+
+
+8. CSS渐变
+    1) 线性渐变 -> linear-gradient是值，需要添加到background-image属性上
+
+    linear-gradient(to 方向, 颜色1, 颜色2,...)
+
+    这里的to 方向 可以不写，默认从上到下
+    例如 to right bottom
+
+    这里的to 方向 也可以写成 角度
+    例如 45deg
+
+    这里还可以设置颜色渐变占比
+    例如 red 25% ， blue 75%
+
+    注：渐变的0度是在页面在下边，正值会按照顺时针旋转，负值按逆时针旋转。
+
+    2) 径向渐变 -> radial-gradient 
+
+
+
+9. 字体图标
+    
+    font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中。
+
+    好处：
+      	1.可以非常方便的改变大小和颜色
+                font-size    color
+      	2.放大后不会失真
+      	3.减少请求次数和提高加载速度
+      	4.简化网页布局
+        5.减少设计师和前端工程师的工作量
+	    6.可使用计算机没有提供的字体
+
+    使用：
+        @font-face语法
+
+            像.woff等文件都是做兼容平台处理的, mac、linux等。
+
+    
 
 
 
