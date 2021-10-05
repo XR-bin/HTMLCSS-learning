@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒影效果</title>
+</head>
+<style>
+    /*
+        reflect    /rɪˈflekt/
+        above上    /əˈbʌv/
+        below下    /bɪˈloʊ/
+        left左    
+        right右
+    */
+    /*
+    .box{
+        margin:50px auto;
+        width:300px;
+         -webkit-box-reflect: below 20px;
+    }
+    */
+
+    .box{
+        margin:50px auto; width:300px;
+        -webkit-box-reflect: below 20px url('./img/love.png');
+    }
+
+    /*
+        linear     /ˈlɪniər/
+        gradient   /ˈɡreɪdiənt/
+    */
+    /*
+    .box{
+         margin:50px auto;
+         width:300px; 
+         -webkit-box-reflect: below 20px linear-gradient( rgba(255,255,255,0) 50% , rgba(255,255,255,1) );
+    }
+    */
+
+    /*模拟倒影效果*/
+    .box{ margin:50px auto; width:300px; transform: scale(-1);}
+</style>
+<body>
+    <div class="box">
+        <img src="./img/girl.jpg" alt="">
+    </div>
+</body>
+</html>

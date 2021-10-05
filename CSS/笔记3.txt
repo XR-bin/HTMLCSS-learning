@@ -1,0 +1,43 @@
+1. text-shadow
+
+    文字的阴影
+        text-shadow: x  y  blur   color
+                     位置  模糊度  颜色
+
+    注：阴影的默认颜色是跟文字样色相同
+    注：通过逗号的方式进行分割，可以设置多阴影
+
+
+
+2. box-shadow
+
+    盒子阴影
+        box-shadow: x y   blur  spread     color  inset
+                    位置  模糊度 阴影的大小  颜色   内阴影(只能选内)
+                
+    注：盒子阴影的默认样色是黑色。
+    注：默认就是外阴影，如果设置outset不起作用，可选的值只有inset表示内阴影。
+    注：通过逗号的方式进行分割，可以设置多阴影
+
+
+
+3. box-reflect
+
+    above上 below下 left左 right右
+	距离
+	遮罩 | 渐变 
+
+    渐变：只是针对透明度的渐变，不能支持颜色的渐变。
+    
+    渐变函数linear-gradient()
+
+    注：box-reflect目前还没有标准化，所以需要添加浏览器前缀。(有可能后来就不能用了)
+
+
+4. 图片模糊效果
+
+    filter 属性定义了元素(通常是<img>)的可视效果(例如：模糊与饱和度)。
+
+    blur(像素值);       模糊效果   例如： filter: blur(20px)
+    grayscale(百分比);  饱和度     例如： filter: grayscale(50%)
+
