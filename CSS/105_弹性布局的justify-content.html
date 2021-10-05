@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局的justify-content</title>
+    <style>
+        /*
+            justify      /ˈdʒʌstɪfaɪ/
+            content      /ˈkɒntent/
+            flex         /fleks/
+            start        /stɑːt/
+            end          /end/
+            center       /ˈsentər/
+            space        /speɪs/
+            between      /bɪˈtwiːn/
+            around       /əˈraʊnd/
+            evenly       /ˈiːvnli/
+        */
+        .box { 
+            width:300px; height:300px; 
+            border:1px black solid; 
+            margin:20px auto; 
+            display: flex; 
+            flex-wrap:wrap;
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            justify-content: space-between;
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly;   */
+        }
+        .box div{ width:50px; background:red;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1测试文本</div>
+        <div>2测试文本测试文本</div>
+        <div>3测试文本测试文本测试文本</div>
+        <div>4测试文本</div>
+        <div>5测试文本</div>
+        <div>6测试文本测试文本</div>
+        <div>7测试文本测试文本测试文本</div>
+        <div>8测试文本</div>
+        <div>9测试文本</div>
+    </div>
+</body>
+</html>

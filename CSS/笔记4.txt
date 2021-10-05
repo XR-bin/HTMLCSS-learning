@@ -6,6 +6,7 @@
     完整、响应式地实现各种页面布局。目前，它已经得到了所有浏
     览器的支持，这意味着，现在就能很安全地使用这项功能。
 
+
     作用在flex容器上            作用在flex子项上
       flex-direction                order
        flex-wrap                  flex-grow
@@ -13,3 +14,53 @@
      justify-content              flex-basis
        align-items                   flex
       align-content               align-self
+
+
+    1) flex-direction
+        用来控制子项整体布局方向，是从左往右还是从右
+    往左，是从上往下还是从下往上。
+
+    取值：
+        row(默认值)  ： 显示行。方向为当前文档水平流方向，默认情况下是从左向右。
+        row-reverse ： 显示为行，文档流方向是从右向左。
+        column ： 显示为列，文档流方向是从上到下
+        column-reverse ： 显示为列。文档流方向是从下到上。
+
+
+    2) flex-wrap
+        flex-wrap用来控制子项整体单行显示还是换行显示
+
+    取值：
+        nowrap(默认值) ： 表示单行显示，不换行
+        wrap ：宽度不够就换行显示
+        wrap-reverse ：本应该换行到下面的子项，现在跑到上一行
+
+
+    3) flex-flow
+            flex-flow属性是flex-direction和flex-wrap的缩写，
+        表示flex布局的flow流动特性。第一个值表示方向，第二个值
+        表示换行，中间用空格隔开。
+
+
+    4) justify-content
+        justify-content属性决定了主轴方向上子项的对齐和分布方式
+
+    取值：
+        flex-start(默认值)  ： 表现为请起始位置对齐           
+        flex-end ： 表现为结束位置对齐
+        center ： 表现为居中对齐
+        space-between ： 表现为两端对齐。多余的空白间距只在元素中间区域分配
+        space-around ： 每个flex子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半
+        space-evenly ： 每个flex子项两侧空白间距完全相等
+
+
+    5) align-items
+            align-items中的items指的就是flex子项们，因此align-items指
+        的就是flex子项们相对于flex容器在侧轴方向上的对齐方式。  
+
+    取值：
+        stretch(默认) ：flex子项拉伸
+        flex-start ：表现为容器顶部对齐
+        flex-end ：表现为容器底部对齐
+        center ： 表现为垂直居中对齐
+
