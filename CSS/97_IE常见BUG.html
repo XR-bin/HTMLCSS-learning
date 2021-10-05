@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IE常见BUG</title>
+        <style>
+            /* opacity IE8及以下版本不识别 */
+            /* .box{ width:100px; height:100px; background:red; opacity:0.5;} */
+            /* 解决办法 filter:alpha(opacity=50) 替代opacity */
+            /* .box{ width:100px; height:100px; background:red; opacity:0.5; filter:alpha(opacity=50);} */
+
+
+            /* IE6下的双边距BUG 在浮动情况下margin会变成设置的两倍 */
+            /* .box{ float:left; width:100px; height:100px; background:red; margin-left: 50px; } */
+            /* 解决办法 设置_display:inline; */
+            /* .box{ float:left; width:100px; height:100px; background:red; margin-left: 50px; _display:inline;} */
+
+
+            /* IE6下的最小高度BUG , 最小高为19px, 当height设置的值小于19px，显示依然是19px */
+            /* .box{ width:300px; height:3px; background:red;}  */
+            /* 解决办法  设置overflow: hidden; */
+            /* .box{ width:300px; height:3px; background:red; overflow: hidden;} */
+
+
+            /* img边框问题 低版本IE的img会自带边框 */
+            /* 解决办法 设置border:none; */
+            img{ border:none; }
+        </style> 
+    </head>
+    <body>
+        <div class="box"></div>
+        <a href="#">
+            <img src="https://img.alicdn.com/tfscom/i2/256691439/TB2wjP9bXgkyKJjSspfXXcj1XXa_!!256691439.jpg_180x180xzq90.jpg" alt="">
+        </a>
+    </body>
+</html>
