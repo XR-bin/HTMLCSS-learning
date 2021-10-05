@@ -1,0 +1,15 @@
+1. 弹性布局flex
+
+    随着移动互联网的发展，对于网页布局来说要求越来越高，
+    而传统的布局方案对于实现特殊布局非常不方便，比如垂直居中。
+    2009年，W3C 提出了一种新的方案----Flex 布局，可以简便、
+    完整、响应式地实现各种页面布局。目前，它已经得到了所有浏
+    览器的支持，这意味着，现在就能很安全地使用这项功能。
+
+    作用在flex容器上            作用在flex子项上
+      flex-direction                order
+       flex-wrap                  flex-grow
+       flex-flow                  flex-shrink
+     justify-content              flex-basis
+       align-items                   flex
+      align-content               align-self
