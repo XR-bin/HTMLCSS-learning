@@ -16,6 +16,7 @@
       align-content               align-self
 
 
+    /********** 父元素上的相关flex **********/
     1) flex-direction
         用来控制子项整体布局方向，是从左往右还是从右
     往左，是从上往下还是从下往上。
@@ -63,4 +64,30 @@
         flex-start ：表现为容器顶部对齐
         flex-end ：表现为容器底部对齐
         center ： 表现为垂直居中对齐
+
+
+    6) align-content
+            align-content可以看成和justify-content是相似且对立的属
+        性，如果所有flex子项只有一行，则align-content属性是没有任何效果的。
+
+    取值：
+        stretch ：每一行flex子元素都等比例拉伸，例如，如果共两行flex子元素，则每行拉伸高度是50%
+        flex-start : 表现为起始位置对齐
+        flex-end : 表现为结束位置对齐
+        center ： 表现为居中对齐
+        space-between ： 表现为两端对齐
+        space-around ： 每一行元素上下都享有独立不重叠的空白空间
+        space-evenl ： 每行元素都完全上下等分
+
+
+    /********** 子元素上的相关flex **********/
+    1) 各属性的作用
+        order ： 可以通过设置order改变某个flex子项的排序位置。默认值是0
+        flex-grow ：扩展flex子项所占据的宽度，扩展所侵占的空间就是除去元素外的剩余的空白间隙。默认值为0
+        flex-shrink ： flex-shrink主要是处理当flex容器空间不足的时候，单个元素的收缩比例，默认值是1.
+        flex-basis ： flex-basis定义了在分配剩余空间之前元素的默认大小。
+        flex ： flex属性是flex-grow、flex-shrink的缩写
+        align-self ： 控制单独某个flex子项的垂直对齐方式
+
+        【注意】flex-grow 和 flex-basis 不能同时设置
 

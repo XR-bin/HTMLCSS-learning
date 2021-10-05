@@ -2,16 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>弹性布局的align-items</title>
+        <title>弹性布局的align-content</title>
         <style>
             /*
                 align        /əˈlaɪn/
-                items        /aɪtəmz/
+                content      /ˈkɒntent/
                 flex         /fleks/
-                stretch      /stretʃ/
+                center       /ˈsentər/
+                flex         /fleks/
                 start        /stɑːt/
                 end          /end/
                 center       /ˈsentər/
+                space        /speɪs/
+                between      /bɪˈtwiːn/
+                around       /əˈraʊnd/
+                evenly       /ˈiːvnli/
             */
 
             .box { 
@@ -20,13 +25,16 @@
                 margin:20px auto; 
                 display: flex; 
                 flex-wrap:wrap;
-                /* align-items: stretch; */
-                /* align-items: flex-start; */
-                /* align-items: flex-end; */
-                align-items: center;
+                /* align-content: flex-start; */
+                /* align-content: flex-end; */
+                /* align-content: center; */
+                /* align-content: stretch; */
+                /* align-content: space-between; */
+                /* align-content: space-around; */
+                align-content: space-evenly;
             }
-            .box div{ width:50px; background:red;}
-        </style>
+            .box div{ width:50px; background:red; }
+        </style>    
     </head>
     <body>
         <div class="box">
@@ -39,6 +47,11 @@
             <div>7测试文本测试文本测试文本</div>
             <div>8测试文本</div>
             <div>9测试文本</div>
+            <div>10测试文本</div>
+            <div>11测试文本测试文本</div>
+            <div>12测试文本测试文本测试文本</div>
+            <div>13测试文本</div>
+            <div>14测试文本</div>
         </div>
     </body>
 </html>
