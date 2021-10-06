@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>justify-items和align-items、place-items</title>
+        <style>
+            .box{ 
+                width:500px; height:500px; 
+                border:1px gray dotted; 
+                display: grid;
+                grid-template-rows: repeat(3 , 100px);
+                grid-template-columns: repeat(3 , 100px);
+                
+                /*
+                    grid        /ɡrɪd/
+                    template    /ˈtempleɪt/
+                    child       /tʃaɪld/
+                    column      /ˈkɒləm/
+                    row         /roʊ/
+                    justify     /ˈdʒʌstɪfaɪ/
+                    items       /aɪtəmz/
+                    align       /əˈlaɪn/
+                    place       /pleɪs/
+                    stretch     /stretʃ/
+                    start       /stɑːt/
+                    end         /end/
+                    center      /ˈsentər/
+                */
+
+                /* justify-items: stretch; */
+                /* justify-items: start; */
+                /* justify-items: end; */
+                /* justify-items: center; */
+
+                /* align-items: stretch; */
+                /* align-items: start; */
+                /* align-items: end; */
+                /* align-items: center; */
+
+                place-items: start end;
+            }
+            .box div{ background:red; border:1px black solid;}
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </body>
+</html>

@@ -112,7 +112,7 @@
     align-content
     place-content
 
-
+    /********** 父元素上的相关grid **********/
     1) grid-template-columns和grid-template-rows
 
             对网格进行横纵划分，形成二维布局。单位可以是像
@@ -135,6 +135,56 @@
         此时grid子项只要使用grid-area属性指定其隶属于那个区。
         
         grid-template是grid-template-rows，grid-template-columns和grid-template-areas属性的缩写。
+
+
+    3) grid-column-gap和grid-row-gap、grid-gap
+
+        grid-column-gap和grid-row-gap属性用来定义网格中网格间隙的尺寸。
+
+        grid-gap属性是grid-column-gap和grid-row-gap属性的缩写。
+
+
+    4) justify-items和align-items、place-items
+
+        justify-items指定了网格元素的水平呈现方式，是水平拉伸显示，还是左中右对齐。
+        align-items指定了网格元素的垂直呈现方式，是垂直拉伸显示，还是上中下对齐。
+
+        place-items可以让align-items和justify-items属性写在单个声明中。
+
+        stretch(默认值)     拉伸。表现为水平或垂直填充 
+        start              表现为容器左侧或顶部对齐
+        end                表现为容器右侧或底部对齐
+        center             表现为水平或垂直居中对齐
+
+
+    5) justify-content和align-content
+        
+        justify-content指定了网格元素的水平分布方式。
+        align-content指定了网格元素的垂直分布方式。
+        
+        place-content可以让align-content和justify-content属性写在一个CSS声明中。
+
+        stretch(默认值)     拉伸。表现为水平或垂直填充 
+        start              表现为容器左侧或顶部对齐
+        end                表现为容器右侧或底部对齐
+        center             表现为水平或垂直居中对齐
+        space-between      表现为两端对齐
+        space-around       享有独立不重叠的空白空间
+        space-evenly       平均分配空白空间
+
+    /********** 子元素上的相关grid **********/
+    grid-column-start    水平方向占据的起始位置
+    grid-column-end      水平方向占据的结束位置,当写span+数字 则表示占网格个数，例如 span 2  表示占两个网格
+    grid-row-start       垂直方向占据的起始位置
+    grid-row-end         垂直方向占据的结束位置,当写span+数字 则表示占网格个数，例如 span 2  表示占两个网格
+    grid-column          grid-column-start和grid-column-end简写 
+    grid-row             grid-row-start和grid-row-end的简写
+    grid-area            表示当前网格所占据的区域，名字和位置两种表示方法
+                         名字方式需要和grid-template-areas或grid-template配合使用
+                         位置方式其实就是grid-column和grid-row的简写
+    justify-self         单个网格元素的水平对齐方式
+    align-self           单个网格元素的垂直对齐方式
+    place-self           align-self和justify-self的简写
 
 
 

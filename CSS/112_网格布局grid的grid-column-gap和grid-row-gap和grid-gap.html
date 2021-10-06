@@ -2,30 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>grid-template-areas和grid-template</title>
+        <title>gird-column-gap和grid-row-gap、grid-gap</title>
         <style>
             .box{ 
                 width:300px; height:300px; 
                 border:1px gray dotted; 
                 display: grid;
-                /*
-                    grid        /ɡrɪd/
-                    template    /ˈtempleɪt/
-                    areas       /erɪə/
-                    child       /tʃaɪld/
-                */
-                /*
-                grid-template-areas: 
-                "a1 a1 a1"
-                "a2 a2 a3"
-                "a2 a2 a3";
-                */
-
                 grid-template: 
                 "a1 a1 a1" 1fr
                 "a2 a2 a3" 2fr
                 "a2 a2 a3" 3fr
                 /1fr 1fr 1fr;
+
+                /*
+                    grid        /ɡrɪd/
+                    template    /ˈtempleɪt/
+                    areas       /erɪə/
+                    child       /tʃaɪld/
+                    column      /ˈkɒləm/
+                    row         /roʊ/
+                    gap         /ɡæp/
+                */
+                /* grid-row-gap: 20px; */
+                /* grid-column-gap: 10px; */
+                grid-gap: 10px 30px;
+
             }
             .box div{ background:red; border:1px black solid;}
             .box div:nth-child(1) { grid-area: a1; }

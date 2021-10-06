@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>justify-content和align-content、place-content</title>
+        <style>
+            .box{ 
+                width:500px; height:500px; 
+                border:1px gray dotted; 
+                display: grid;
+                grid-template-rows: repeat(3 , 100px);
+                grid-template-columns: repeat(3 , 100px);
+                
+                /*
+                    grid        /ɡrɪd/
+                    template    /ˈtempleɪt/
+                    child       /tʃaɪld/
+                    column      /ˈkɒləm/
+                    row         /roʊ/
+                    justify     /ˈdʒʌstɪfaɪ/
+                    content     /ˈkɒntent/
+                    align       /əˈlaɪn/
+                    place       /pleɪs/
+                    stretch     /stretʃ/
+                    start       /stɑːt/
+                    end         /end/
+                    center      /ˈsentər/
+                    space       /speɪs/
+                    between     /bɪˈtwiːn/
+                    around      /əˈraʊnd/
+                    evenly      /ˈiːvnli/
+                */
+                /* justify-content: stretch; */
+                /* justify-content: start; */
+                /* justify-content: end; */
+                /* justify-content: center; */
+                /* justify-content: space-between; */
+                /* justify-content: space-around; */
+                /* justify-content: space-evenly; */
+
+                /* align-content: stretch; */
+                /* align-content: start; */
+                /* align-content: end; */
+                /* align-content: center; */
+                /* align-content: space-between; */
+                /* align-content: space-around; */
+                /* align-content: space-evenly; */
+
+                place-content: end center;
+            }
+            .box div{ background:red; border:1px black solid;}
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </body>
+</html>
