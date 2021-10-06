@@ -1,0 +1,174 @@
+// 单行注释，不会被编译
+/*
+    多行注释，会被编译
+*/
+
+
+// 通过$定义变量
+$number : 123px;
+$key : margin;
+$i : 2;
+
+
+
+// 当引用变量时，
+// 如果是选择器或属性名引用则通过 #{变量名}
+// 如果是属性值引用则通过 $变量名
+.box#{$i}{
+    width : $number;
+    height : $number;
+    #{$key} : auto;
+}
+
+
+
+// 按从上到下的顺序执行，不会提前处理赋值操作
+.box3{
+    height : $number;
+    // 赋值操作
+    $number : 456px;
+    width : $number;
+}
+
+// 内部赋值不会影响全局变量原来的值
+.box4 {
+    width: $number;
+}
+
+
+
+// 支持选择器嵌套编写
+// 伪类选择器写法 &+伪类选择器
+// sass是支持属性嵌套的写法
+ul {
+    list-style: none;
+    li {
+        float: left;
+        div { margin: 10px; }
+        p { margin: 20px; }
+    }
+    &:hover {
+        color: red;
+        font : {
+            size : 10px;
+            weight : bold;
+            family : 宋体;
+        }
+    }
+}
+
+
+
+// 支持加减乘除
+// 进行运算操作时，如果都有单位，但单位不同,则会报错
+// 进行除法操作时要用()括起来
+$num : 100px;
+.box5 {
+    width : $num * 3;
+    //Sass中如果单位不同的话，是不能运算
+    //height : $num + 20em;
+    font : 20px / 1.5;
+    // 默认 / 是分割的操作
+    padding : (20px / 1.5);
+    color : #010203 * 2;
+}
+
+
+// 支持自定义函数
+// 支持一些数学函数
+@function sum($n,$m){
+    @return $n + $m;
+}
+.box5{
+    width : round(3.4px);
+    height : percentage(0.2);
+    margin : random();
+    padding : sqrt(25%);
+    font-size : sum(4px , 5px);
+}
+
+
+// 通过@mixin实现，支持定义类似C语言的define的变量，并且支持传传参数，但必须要通过@include
+@mixin show {
+    display : block;
+}
+@mixin hide($color) {
+    display : none;
+    color : $color;
+}
+
+.box7{
+    width : 100px;
+    @include show;
+    @include hide(red);
+}
+
+// 没有类似对象的操作
+
+// 通过% 和 @extend 实现 共同设置CSS(.line,.box10,box11)
+%line{
+    display : inline;
+}
+
+.box10{
+    @extend %line;
+}
+.box11{
+    @extend %line;
+}
+
+
+
+// 通过map-values();，属性值合并，但之间用，隔开
+// 通过zip(map-values()...)，属性值合并，但之间没有，隔开
+$background : (
+    a : url(a.png),
+    b : url(b.png)
+);
+$tranform : (
+    a : scale(2),
+    b : rotate(30deg)
+);
+.box12{
+    background : map-values($background);
+    transform : zip(map-values($tranform)...);
+}
+
+
+
+// 通过嵌入的选择器内部的方式添加@media
+.box13{
+    width : 100px;
+    @media all and ( min-width : 768px ){
+        width : 600px;
+    }
+    @media all and ( min-width : 1440px ){
+        width : 900px;
+    }
+}
+
+
+
+// 通过if else 实现选择操作
+$count : 3;
+.box14{
+    @if($count > 4){
+        width : 100px + $count;
+    }
+    @else{
+        width : 10px + $count;
+    }
+}
+
+
+// 通过 @for ... from ... through ... 实现循环操作
+@for $i from 0 through 2{
+    .box-#{$i}{
+        width : 100px + $i;
+    }
+}
+
+
+// 通过@import ，引入外部scss
+@import './reset.scss';
+

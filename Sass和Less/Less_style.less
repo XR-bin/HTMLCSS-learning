@@ -1,0 +1,179 @@
+// 单行注释，不会被编译
+/*
+    多行注释，会被编译
+*/
+
+
+
+// 通过@定义变量
+@number : 123px;
+@key : margin;
+@i : 2;
+
+
+// 当引用变量时，
+// 如果是选择器或属性名引用则通过 @{变量名}
+// 如果是属性值引用则通过 @变量名
+.box@{i}{
+    width : @number;
+    height : @number;
+    @{key} : auto;
+}
+
+// 先进行赋值操作，再进行替换
+.box3{
+    height : @number;
+    // 赋值操作
+    @number : 456px;
+    width : @number;
+}
+
+// 内部赋值不会影响全局变量原来的值
+.box4 {
+    width: @number;
+}
+
+
+// 支持选择器嵌套编写
+// 伪类选择器写法 &+伪类选择器
+// less是没有这种属性嵌套的写法
+ul {
+    list-style: none;
+    li {
+        float: left;
+        div { margin: 10px; }
+        p { margin: 20px; }
+    }
+    &:hover {
+        color: red;
+        //不支持
+        // font : {
+            // size : 10px;
+            // weight : bold;
+            // family : 宋体;
+        // }
+    }
+}
+
+
+
+// 支持加减乘除
+// 进行运算操作时，如果都有单位，但单位不同，会以第一个数的单位作为结果单位
+// 进行除法操作时要用()括起来
+@num : 100px;
+.box5{
+    width : @num * 3;
+    height : @num + 10em;
+    margin : 10em + @num;
+    font : 20px / 1.5;
+    padding : (20px / 1.5);
+    color : #010203 * 2;
+}
+
+
+
+// 不支持自定义函数
+// 支持一些数学函数
+.box6{
+    width : round(3.4px);
+    height : percentage(0.2);
+    margin : random();
+    padding : sqrt(25%);
+}
+
+
+
+// 通过.实现，支持定义类似C语言的define的变量，并且支持传传参数，直接可以引用
+.show{
+    display : block;
+}
+.hide(@color){
+    display : none;
+    color : @color;
+}
+.box7{
+    width : 100px;
+    .show;
+    .hide(blue);
+}
+
+
+
+// 通过#实现，支持对象操作
+#nm(){
+    .show{ display: inline-block; }
+}
+
+.box8{
+    #nm.show;
+}
+.box9{
+    #nm.show;
+}
+
+
+
+// 通过&:extend() 实现 共同设置CSS(.line,.box10,box11)
+.line{
+    display : inline;
+}
+.box10{
+    &:extend(.line);
+}
+.box11{
+    &:extend(.line);
+}
+
+
+// 通过+，属性值合并，但之间用，隔开
+// 通过+_，属性值合并，但之间没有，隔开
+.box12{
+    background+ : url(a.png);
+    background+ : url(b.png);
+    transform+_ : scale(2);
+    transform+_ : rotate(30deg);
+}
+
+
+// 通过嵌入的选择器内部的方式添加@media
+.box13{
+    width : 100px;
+    @media all and ( min-width : 768px ){
+        width : 600px;
+    }
+    @media all and ( min-width : 1440px ){
+        width : 900px;
+    }
+}
+
+
+
+// 通过when实现选择操作
+@count : 3;
+.get(@cn) when ( @cn > 4 ){
+    width : 100px + @cn;
+}
+.get(@cn) when ( @cn < 4 ){
+    width : 10px + @cn;
+}
+.box14{
+    .get(@count);
+}
+
+
+
+// 循环操作， 通过递归函数的方式实现
+@count2 : 0;
+.get2(@cn) when (@cn < 3){
+    .get2((@cn+1));
+    .box-@{cn}{
+        width: 100px + @cn;
+    }
+}
+
+.get2(@count2);
+
+
+// 通过@import ，引入外部less
+@import './reset.less';
+
