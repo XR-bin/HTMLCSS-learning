@@ -91,3 +91,50 @@
 
         【注意】flex-grow 和 flex-basis 不能同时设置
 
+
+
+2. 网格布局grid
+
+    Grid布局是一个二维的布局方法，纵横两个方向总是同时存在。
+
+    作用在grid容器上             作用在grid子项上
+    grid-template-columns       grid-column-start
+    grid-template-rows          grid-column-end
+    grid-template-area          grid-row-start
+    grid-template               grid-row-end
+    grid-column-gap             grid-column
+    grid-row-gap                grid-row
+    grid-gap                    grid-area
+    justify-items               justify-self
+    align-items                 align-self
+    place-items                 place-self
+    justify-content
+    align-content
+    place-content
+
+
+    1) grid-template-columns和grid-template-rows
+
+            对网格进行横纵划分，形成二维布局。单位可以是像
+        素，百分比，自适应以及fr单位（网格剩余空间比例单位）。
+
+            有时候，我们网格的划分是很规律的，如果需要添加多个
+        横纵网格时，可以利用repeat()语法进行简化操作。
+
+        fr是比例分配.
+        例如grid-template-columns: 1fr 2fr
+        表示第一列宽度占1/3 第二列占2/3
+
+        repeat()作用是批量操作
+            例如 repeat(3,1fr) 等价于 1fr 1fr 1fr
+
+    
+    2) grid-template-areas和grid-template
+
+            grid-template-areas就是给我们的网格划分区域的。
+        此时grid子项只要使用grid-area属性指定其隶属于那个区。
+        
+        grid-template是grid-template-rows，grid-template-columns和grid-template-areas属性的缩写。
+
+
+
