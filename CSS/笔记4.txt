@@ -188,3 +188,76 @@
 
 
 
+3. 移动端模拟器
+    切换平台之后，一定要重新刷新浏览器。
+
+4. 去访问一些网站的PC端和移动端？
+
+    大一点的网站都是分开开发的，PC端一套代码，移动端端一套代码。
+
+    访问淘宝网  ->   后端检测当前设备 -> 如果是PC端 -> www.taobao.com
+
+    访问淘宝网  ->   后端检测当前设备 -> 如果是移动端 -> www.taobao.com重定向 -> h5.m.taobao.com
+
+5. viewport视口
+
+    在移动端viewport视口就是浏览器显示页面内容的
+    屏幕区域。在viewport中有两种视口，分别表示为
+    ，visual viewport（可视视口）和layout viewport（布局视口）。
+
+    visual viewport 固定大小跟屏幕大小相同，
+    而layout viewport 可改变大小。
+    Layout viewport默认大小为980像素，
+    可通过document.documentElement.clientWidth获取。
+
+    【注意】现代网页需要将layout viewport设置成
+    跟visual viewport等同大小，方便进行网页制作。
+
+
+    通过<meta>标签进行设置，name属性指定viewport值，
+    content属性进行视口配置。
+
+    width ： 设置layout viewport的宽度特定值，device-width表示设备宽
+    height： 设置layout viewport的高度特定值，一般不设置
+    initial： 设置页面的初始缩放
+    minimum-scale：设置页面的最小缩放
+    maximum-scale：设置页面的最大缩放
+    user-scalable：设置页面能否进行缩放
+
+    我们一般整体设置为
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+
+
+
+6. 移动端适配方案
+    1) 百分比布局，也叫流式布局。代表网站：优酷、百度、天猫、腾讯。
+    2) 等比缩放布局，也叫rem布局。代表网站：网易、爱奇艺、淘宝、美团。 
+
+    百分比布局(流式布局)：
+        好处：大屏幕下显示更多的内容。 	
+        坏处：宽屏下比例会有一些不协调
+
+
+    等比布局(rem布局)的单位使用
+        em : 是一个相对单位，1em等于当前元素或父元素的font-size值
+        rem : 是一个相对单位，1rem等于根元素的font-size值。
+        vw / vh : 把屏幕分为100份，1vw等于屏幕宽的1%。 
+
+    动态设置font-size：
+        1) js设置
+        2) vw设置
+
+        推荐一个VC插件: px to rem
+
+
+        vw : 把屏幕分为了100份，屏幕宽等于100vw , 
+        iphone 375 1vw -> 3.75
+        iphone plus 414  1vw -> 4.14
+
+        我们可以算出一个比例关系是26.666667vw
+
+        注：要给body重置一下font-size : 16px
+
+
+
+
