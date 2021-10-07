@@ -1,0 +1,27 @@
+/* @import "./text.css";
+
+div {
+    color: red;
+    background-color: blue;
+    transform: rotate(30deg);
+} */
+
+:root {
+    --Mycolor: red;
+}
+
+div {
+    background-color: var(--Mycolor);
+}
+
+p {
+    color: #111;
+}
+
+.box1 {
+    background: url("./icon/1.jpg");
+}
+
+.box2 {
+    background: url("./icon/2.jpg");
+}

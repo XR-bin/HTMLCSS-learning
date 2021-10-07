@@ -1,0 +1,27 @@
+/* @import "./text.css";
+
+div {
+    color: red;
+    background-color: blue;
+    transform: rotate(30deg);
+} */
+
+div {
+    background-color: red;
+}
+
+p {
+    color: #111;
+}
+
+.box1 {
+    background-image: url(../dist/sprite.png);
+    background-position: 0px 0px;
+    background-size: 51px 22px;
+}
+
+.box2 {
+    background-image: url(../dist/sprite.png);
+    background-position: -25px 0px;
+    background-size: 51px 22px;
+}

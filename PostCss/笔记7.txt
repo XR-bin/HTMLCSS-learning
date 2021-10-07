@@ -1,0 +1,45 @@
+1) 安装PostCss(下面两个必须都安装，缺一不可)
+    cnpm i postcss-cli –g
+    cnpm i postcss -g
+    【个人建议】个人感觉没必要全局安装，局部安装就OK了(把-g去掉就不是全局了)
+
+2) 测试是否安装成功
+    在cmd中输入postcss
+    出现
+        Input Error: Did not receive any STDIN
+    表示安装成功
+
+3) 创建PostCss文件夹
+    在文件夹里面分别创建dist和src文件夹
+    在src文件夹中创建demo.css
+
+4) 在src中编写css
+
+5) 通过下面的指令将src中的demo.css进行转化，并将生成的文件存放在dist中
+    -o表示进行文件转换
+    postcss src/demo.css -o dist/demo.css
+
+    如果加-w可实现监听效果
+         postcss src/demo.css -o dist/demo.css -w
+         
+         ctrl + c退出监听
+
+
+6) 在src文件中创建一个postcss.config.js文件，这个文件是用来引入外部插件的使用的
+
+7) 比较常用的插件
+
+    1、autoprefixer    作用：给样式添加浏览器前缀     安装：cnpm i autoprefixer
+
+	2、postcss-import  作用：合并多个css文件         安装：cnpm i postcss-import
+
+	3、cssnano         作用：代码压缩            安装：cnpm i cssnano 
+
+	4、postcss-cssnext  作用: 将比较新的CSS语法进行降级     安装：cnpm i postcss-cssnext
+
+	5、stylelint    作用：语法规范预警(出现错误语法会报错)    安装：cnpm i stylelint
+
+	6、postcss-sprites   作用：将多个图纸合成雪碧图，CSS代码也会自动做相应处理   安装：cnpm i postcss-sprites
+
+
+
